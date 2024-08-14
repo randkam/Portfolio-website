@@ -1,0 +1,293 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>  
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+ 
+</head>
+
+<body>
+
+     <div id="particles"></div>
+    <div class="navigation" id="navbar">
+        <img class="logo"  id = "myLogo" src="images/logo.PNG">	
+
+        <div class="nav-links">
+            <div class = "navOption">
+                <a  id= "navOptionAbout" class="navOptionText" href="#aboutMePage">About Me</a>
+            </div>
+            <div class = "navOption">
+                <a  id= "navOptionSkills" class="navOptionText" href="#skillsPage"> Skills  </a>
+            </div>
+            <div class = "navOption">
+                <a  id= "navOptionProjects" class="navOptionText" href="#projectsPage">  Projects </a>
+            </div>
+            <div class = "navOption">
+                <a id= "navOptionResume" class="navOptionText"href="Resume/RandResume.pdf">    Resume  </a> 
+            </div>
+            
+             <a href="https://www.linkedin.com/in/rand-kamaleddine-9974102a8/">
+				<img class="linkedin" src="images/linkedin.png" >
+			</a>
+            <a href="https://github.com/randkam">
+				<img class="github" src="images/github-white.PNG" >
+			</a>
+			
+        </div>
+
+    </div>
+   
+
+
+    <div class="landingPage" id = #landingPage>
+        
+        <p class="leftText"> <span style="font-weight: bold;">{</span><br> &emsp;Hello, My name is <br> <span style="font-size: 60px; font-weight: bold;">&ensp;Rand Kamaleddine</span><br>&emsp;<span style="font-weight: bold;">{</span><br>&emsp; <span style="font-size: 18px; font-weight: bolder;">&emsp;Software Developer | Computer Science Student</span><br>&emsp;<span style="font-weight: bold;">}</span> <br><span style="font-weight: bold;">}</span></p>
+        <div class="right">
+        <p class="rightText">Mixing creativity with <br>technology to build cool stuff</p>
+            <img class="saturn" src="images/NTHO.gif">
+        </div>
+    </div>
+
+    <div class="aboutMePage">
+        <t class = "aboutTitle">About Me</t>
+        <div class="aboutPageRow">
+            <div class="aboutTxt">
+                <ul class="aboutMeText"><li>Currently pursuing a degree in <span style =" color: darkblue; font-weight: bold;">Computer science</span> with a minor in Mathematics at the University of Guelph.</li> </ul>
+                <ul class="aboutMeText"><li>With my proffesional experience in  <span style =" color: darkblue; font-weight: bold;">full-stack</span> development and <span style ="color: darkblue; font-weight: bold;">databases</span>,<br>I am aiming to leverage my skills to contribute to innovative projects.</li> </ul>
+                <ul class="aboutMeText"><li> Background in team sports, which has honed my teamwork and collaboration skills.</li> </ul>
+            </div>
+            <div class = "aboutImg">
+                <img class="aboutMeImage" src="images/selfPortrait.png">	
+            </div> 
+           
+        </div>  
+    </div>
+
+    <div class="skillsPage">
+        <t class = "skillsTitle">Skills/Technologies</t>
+        <!-- <div id="particles"></div> -->
+        
+        <div class ="languageScreen">
+            <div id="particles-skills"></div>
+            <div class = "language">
+                <img class="languageIcon" src = "images/Python-logo-notext.svg.png" >
+                <p class="languageName"> Python </p>
+            </div> 
+        
+            <div class = "language">
+                <img class="languageIcon" src = "images/PHP-logo.svg.png" >
+                <!-- <p class="languageName"> PHP </p> -->
+                <p class="languageTechnology">Laravel</p>
+            </div>
+
+            <div class = "language">
+                <img class="languageIcon" src = "images/C_Programming_Language.svg.png" >
+                <!-- <p class="languageName"> C </p> -->
+            </div>
+
+            <div class = "language">
+                <img class="languageIcon" src = "images/HTML5_logo_and_wordmark.svg.png" >
+                <p class="languageName"> HTML/CSS </p>
+            </div>
+
+            <div class = "language">
+                <img class="languageIcon" src = "images/database_5664.png" >
+                <p class="languageName"> Databases </p>
+                <p class="languageTechnology">MySQL</p>
+            </div>
+
+            <div class = "language">
+                <img class="languageIcon" src = "images/javascript-logo-javascript-icon-transparent-free-png.webp" >
+                <p class="languageName"> JavaScript </p>
+                <p class="languageTechnology">React, Redux</p>
+            </div>                           
+        </div>
+    </div>
+    
+    <div class = "projectsPage">
+        <t class = "projectsTitle">Projects</t>
+        <div class = "projectScreen">
+            <div class = "project">
+                <div class="projectOverlay" >
+                    <img class="projectImage" src = "images/rsa-algorithm-feature.jpg">
+                    <div class = "overlay" id="RSA">
+                        <ul class = "pDescription"><li>Developed RSA encryption and decryption algorithms from scratch in Python.</li><br><li>Integrated extended Euclidean algorithm for key generation, modular
+                            exponentiation for encryption and Chinese Remainder Theorem for efficient
+                            decryption.</li> </ul>  
+                            <a href="https://github.com/randkam/RSA-encrypt-decrypt">
+                                <img class="githubP" src="images/github-white.PNG" >
+                            </a>
+                    </div>
+                </div>
+                <p class="projectName"> RSA Encrypt/Decrypt </p>
+            </div>
+            <div class = "project">
+                <div class="projectOverlay">
+                    <img class="projectImage" src = "images/unnamed.png">
+                    <div class = "overlay" id="PDF">
+                        <ul class = "pDescription"><li>CLI developed in Python which allows users to perform operations on PDFs and TXT files</li><br><li>Operations include merging, swapping, combining, deleting, etc..</li> </ul>
+                        <a href="https://github.com/randkam/pycli">
+                            <img class="githubP" src="images/github-white.PNG" >
+                        </a>
+                    </div>
+                </div>
+                <p class="projectName"> PDF Tools CLI </p>
+            </div>
+            <div class = "project">
+                <div class="projectOverlay">
+                    <img class="projectImage" src = "images/4rvmtS.png">
+                    <div class = "overlay" id="crossy">
+                        <ul class = "pDescription"><li>Developed a 2D Crossy Road 'Frogger' game in Python using the PyProcessing library, implementing objectoriented programming and the use of an AI player for enhanced gameplay experience. (based
+                            on original Frogger game)</li></ul>
+                            <a href="https://github.com/randkam/frogger-game">
+                                <img class="githubP" src="images/github-white.PNG" >
+                            </a>
+                    </div>
+                </div>
+                <p class="projectName"> Crossy Road Game</p>
+            </div>
+            <div class = "project">
+                <div class="projectOverlay">
+                    <img class="projectImage" src = "images/card-games-online-1.jpg">
+                    <div class = "overlay" id="wedge">
+                        <ul class = "pDescription"><li>Developed a two player card game 'Wedge'  in Python using the PyProcessing library which included leaderboard charts, previous high scores and other cool features. (based
+                            on original Wedge card game)</li></ul>
+                            <a href="https://github.com/randkam/wedge-card-game">
+                                <img class="githubP" src="images/github-white.PNG" >
+                            </a>
+                    </div>
+                </div>
+                <p class="projectName"> Wedge Card Game</p>
+            </div>
+        </div>
+    </div>
+
+    <div class = "hobbiesPage">
+        <t class = "hobbiesTitle">Hobbies/Interests</t>
+        <div class="hobbieScreen">
+            <img class="hobbieImage" src="images/IMG_7094.PNG">
+            <ul class=" hobbieText"> <li>Apart from academics, I have an immense passion for playing sports and staying active!</li>  <br><li>I have a rich history in sports which includes Basketball, Hockey  and soccer all at a competitive level</li>
+            </ul>
+            <img class="hobbieImage" src="images/hobby2Image.png">
+
+        </div>
+    </div>
+        
+    
+    </div>
+
+  
+    
+    <script>
+        //  change the navigation bar color on scroll
+        window.addEventListener("scroll", function() {
+            var navbar = document.getElementById("navbar");
+            var landingPageHeight = document.querySelector(".landingPage").offsetHeight;
+            landingPageHeight -= 83;
+            if (window.scrollY > landingPageHeight) {
+                navbar.classList.add("image");
+            } else {
+                navbar.classList.remove("image");
+            }
+        });
+
+        //about me button
+        document.getElementById('navOptionAbout').addEventListener('click', function() {
+            const targetPage = document.querySelector('.aboutMePage ');
+            const targetPosition = targetPage.getBoundingClientRect().top + window.pageYOffset;
+            const offset = 50; // Adjust this value as needed
+            const scrollPosition = targetPosition - offset;
+            window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+        });
+
+        //logo button
+        document.getElementById('myLogo').addEventListener('click', function() {
+            const targetPage = document.querySelector('.landingPage ');
+            const targetPosition = targetPage.getBoundingClientRect().top + window.pageYOffset;
+            const offset = 50; // Adjust this value as needed
+            const scrollPosition = targetPosition - offset;
+            window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+        });
+
+        //skils button
+        document.getElementById('navOptionSkills').addEventListener('click', function() {
+            const targetPage = document.querySelector('.skillsPage ');
+            const targetPosition = targetPage.getBoundingClientRect().top + window.pageYOffset;
+            const offset = 90; // Adjust this value as needed
+            const scrollPosition = targetPosition - offset;
+            window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+        });
+
+        //projects button
+
+        document.getElementById('navOptionProjects').addEventListener('click', function() {
+            const targetPage = document.querySelector('.projectsPage ');
+            const targetPosition = targetPage.getBoundingClientRect().top + window.pageYOffset;
+            const offset = 60; // Adjust this value as needed
+            const scrollPosition = targetPosition - offset;
+            window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+    // Elements
+    const navLinks = document.querySelectorAll('.navOptionText');
+    const sections = document.querySelectorAll('.aboutMePage, .skillsPage, .projectsPage');
+    const sectionIds = ['#aboutMePage', '#skillsPage', '#projectsPage'];
+
+    // Function to remove active class
+    function removeActiveClasses() {
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+        });
+    }
+
+    // Function to handle scroll
+    function onScroll() {
+        let scrollPosition = window.scrollY + 200; // Offset for visibility
+
+        sections.forEach((section, index) => {
+            if (scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
+                removeActiveClasses();
+                if (scrollPosition>800 && scrollPosition<2600){
+                    document.querySelector(`a[href="${sectionIds[index]}"]`).classList.add('active');
+                }
+            }
+        });
+    }
+
+    // Event listeners
+    window.addEventListener('scroll', onScroll);
+
+    // Initial check
+    onScroll();
+    
+});
+particlesJS('particles', {
+            particles: {
+                number: { value: 150, density: { enable: true, value_area: 800 } },
+                color: { value: "#ffffff" },
+                shape: { type: "star", stroke: { width: 0, color: "#000000" }, polygon: { nb_sides: 5 } },
+                opacity: { value: 0.5, random: false, anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false } },
+                size: { value: 2, random: true, anim: { enable: false, speed: 40, size_min: 0.5, sync: false } },
+                line_linked: { enable: false, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 0.8, direction: "none", random: true, straight: false, out_mode: "out", bounce: false, attract: { enable: false, rotateX: 600, rotateY: 1200 } }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: { onhover: { enable: false, mode: "repulse" }, onclick: { enable: false, mode: "push" }, resize: true },
+            },
+            retina_detect: true
+        });
+
+        // Initialize particles.js for the skills page
+        
+
+    </script>
+
+    
+</body>
+
+</html> 

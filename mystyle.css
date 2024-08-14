@@ -1,0 +1,436 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-image: url("images/background.jpg");
+  /* background-color: black; */
+  background-size: cover;
+}
+
+.navigation {
+  position: fixed; /* add this */
+  display: flex;
+  align-items: center;
+  height: 12vh;
+  width: 100%;
+  /* background-color: rgb(30, 32, 54); */
+  /* background-color: #16172b; */
+  /* background-color: #14121d; */
+  background-color: black;
+
+  z-index: 2;
+}
+
+.navigation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12vh;
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  z-index: -1
+  
+
+}
+
+.navigation.image::before {
+  opacity: 1;
+}
+
+
+.landingPage{
+  padding-top: 40px;
+  /* background-image: url("google-slides-background-f7rghvrqb32o9o0c.jpg"); */
+  /* background-color: rgb(30, 32, 54); */
+  /* background-color: #16172b;
+  background-color: #14121d; */
+  background-color: black;
+
+
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 95vh;
+  justify-content: center;
+  min-height: 600px;
+  font-family: 'JetBrains Mono';
+  flex-wrap: wrap;
+}
+
+.leftText{
+  padding: 0 0 5% 5%;
+  font-size: 36px;
+    line-height: 60px;
+    height: 90%;
+    color: white;
+}
+
+.right{
+  display: flex;
+  flex-direction: column;
+  /* padding: 0 8% 20% 10%; */
+}
+.rightText{
+  /* padding: 0 8% 20% 10%; */
+  font-family: 'JetBrains Mono';
+  font-size: 23px;
+  color: white;
+  text-align: center;
+}
+
+.aboutMePage{
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  min-height: 450px;
+}
+.aboutTitle{
+  justify-content: center;
+  font-family: 'JetBrains Mono';
+  font-size: 40px;
+  color: white;
+
+}
+.aboutPageRow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.aboutTxt{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 50px;
+  width: 100%;
+  height: 100%;
+  font-family: 'JetBrains Mono';
+  font-size: 23px;
+  color: white;
+}
+.aboutImg{
+  width: 30%; 
+  padding-left: 30px;
+  padding-right: 10px;
+}
+
+.aboutMeImage{
+  border: 3px solid white;
+  
+  border-radius: 40px;
+  width: 80%;
+ 
+}
+
+.skillsPage{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  position: relative; /* To contain the absolutely positioned particles */
+  /* z-index: 1; */
+
+  
+}
+.skillsTitle{
+  font-weight: bold;
+  display: flex;
+  font-family: 'JetBrains Mono';
+  font-size: 40px;
+  justify-content: center;
+  padding-bottom:10px ;
+
+}
+.languageScreen{
+  display: flex;
+  background-color: rgb(30, 32, 54);
+  justify-content: center;
+  width: 70%;
+  height: 80%;  
+  padding-left: 100px;
+  align-self: center;
+  align-items: center;
+  border-radius: 200px;
+  border: 10px solid white;
+  flex-direction: row;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+.languageName{
+  display: flex;
+  justify-content: center;
+  font-family: 'Inter';
+  margin: 0;
+  font-size: 30px; 
+}
+.language{
+  display: flex;
+  flex-direction: column;
+  padding: 30px 60px 30px 60px;
+  align-items: center;
+}
+.languageTechnology{
+  display: flex;
+  justify-content: center;
+  font-family: 'Inter';
+  font-size: 20px; 
+  margin: 0;
+}
+
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  width: 80px;
+  padding: 0px 0px 0px 0px;
+  height: 80px;
+}
+
+.logo:hover{
+  scale: 1.1;
+  transition: o.5s;
+}
+
+.nav-links {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 180px;
+  align-items: center;
+  margin-right: auto;
+}
+
+.navOption {
+  display: flex;
+  color: white;
+  height: 45px;
+  width: 120px;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.navOptionText:hover{
+  scale: 1.1;
+  transition: o.5s;
+  color: grey;
+
+}
+
+
+.linkedin {
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 35px;
+  height: 35px;
+}
+.linkedin:hover{
+  scale: 1.1;
+  transition: o.5s;
+}
+
+.github {
+  width: 35px;
+  height: 35px;
+}
+.github:hover{
+  scale: 1.1;
+  transition: o.5s;
+}
+.navOptionText {
+  font-family: 'Inter';
+  font-weight:normal;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.projectsTitle{
+  font-weight: bold;
+  display: flex;
+  font-family: 'JetBrains Mono';
+  font-size: 40px;
+  justify-content: center;
+  padding-bottom:20px ;
+  padding-top: 90px;
+}
+.projectsPage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  font-family: 'Inter';
+  font-size: 35px;
+}
+.projectScreen{
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  flex-wrap: wrap; 
+}
+.project{
+  padding: 40px;
+}
+.projectImage{
+  width: 600px;
+  height: 300px;
+  border-radius: 40px;
+  display: block;
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(41, 41, 82);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  padding: 10px;
+  background-size: cover;
+}
+
+.githubP {
+  align-self: flex-end; 
+  width: 35px;
+  height: 35px;
+  /* padding-left: 270px; */
+  /* text-align: center; */
+
+}
+
+#wedge{
+  /* background-color:rgb(20, 108, 12) ; */
+  background-image: url(images/wedgeBlur.jpg);
+}
+#crossy{
+  /* background-color: rgb(41, 41, 82); */
+  background-image: url("images/crossyBlur.png");
+}
+#RSA{
+  /* background-color: rgb(54, 97, 106); */
+  background-image: url(images/rsaBlur.jpg);
+}
+#PDF{
+  /* background-color: rgb(236, 68, 44); */
+  background-image: url(images/pdfBlur.png);
+}
+
+.projectName{
+  display: flex;
+  justify-content: center;
+  margin: 2px;
+  font-family: 'Jetbrains Mono';
+}
+.projectOverlay {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* Adjust as needed */
+  overflow: hidden; /* Ensure no overflow */
+  border-radius: 40px;
+
+}
+
+.projectOverlay:hover .projectImage {
+    opacity: 0;
+}
+
+.projectOverlay:hover .overlay {
+    opacity: 1;
+}
+
+
+.pDescription{
+  color: darkgray;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-family: 'Jetbrains Mono';
+}
+.saturn{
+  padding-left: 170px;
+  width: 300px;
+  height: 250px;
+  padding-top: 70px;
+  border-radius: 100%;
+  object-fit: cover;
+  
+  /* z-index: 1; */
+}
+
+.githubP:hover{
+  scale: 1.1;
+  transition: o.5s;
+}
+.navOptionText.active {
+  color: grey;
+}
+
+.hobbiesPage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono';
+}
+
+.hobbiesTitle{
+  font-size: 40px;
+  color: white;
+  padding: 40px;
+}
+.hobbieScreen{
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  /* align-items: center; */
+  align-self: center;
+}
+.hobbieText{
+  padding: 20px;
+  color: white;
+  font-size: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 40%;
+  /* text-align: center; */
+}
+
+.hobbieImage{
+  width: 300px;
+  height: 380px;
+  border-radius: 50px;
+  /* padding: 50px; */
+  border: 3px solid white;;
+}
+#particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+
+  /* top: 0;
+  left: 0; */
+  /* z-index: -1;   */
+}
