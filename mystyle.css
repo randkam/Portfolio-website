@@ -6,8 +6,8 @@ body, html {
 }
 
 body {
-  background-image: url("images/background.jpg");
-  /* background-color: black; */
+  /* background-image: url("images/background.jpg"); */
+  background-color: #32292F;
   background-size: cover;
 }
 
@@ -16,45 +16,17 @@ body {
   display: flex;
   align-items: center;
   height: 12vh;
+  color: black;
   width: 100%;
-  /* background-color: rgb(30, 32, 54); */
-  /* background-color: #16172b; */
-  /* background-color: #14121d; */
-  background-color: black;
-
+  /* background-image: url(images/navbar.png); */
+  background-color: #32292F;
   z-index: 2;
-}
-
-.navigation::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 12vh;
-  background-image: url('images/background.jpg');
-  background-size: cover;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-  z-index: -1
-  
-
-}
-
-.navigation.image::before {
-  opacity: 1;
 }
 
 
 .landingPage{
   padding-top: 40px;
-  /* background-image: url("google-slides-background-f7rghvrqb32o9o0c.jpg"); */
-  /* background-color: rgb(30, 32, 54); */
-  /* background-color: #16172b;
-  background-color: #14121d; */
-  background-color: black;
-
-
+  background-image: url("images/Untitled\ \(1\).png");
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -64,6 +36,7 @@ body {
   min-height: 600px;
   font-family: 'JetBrains Mono';
   flex-wrap: wrap;
+
 }
 
 .leftText{
@@ -71,19 +44,19 @@ body {
   font-size: 36px;
     line-height: 60px;
     height: 90%;
-    color: white;
+    color: #F0F7F4;
 }
 
 .right{
   display: flex;
   flex-direction: column;
-  /* padding: 0 8% 20% 10%; */
+  padding: 0 8% 20% 10%;
 }
 .rightText{
   /* padding: 0 8% 20% 10%; */
   font-family: 'JetBrains Mono';
   font-size: 23px;
-  color: white;
+  color: #F0F7F4;
   text-align: center;
 }
 
@@ -96,19 +69,31 @@ body {
   width: 100%;
   height: auto;
   min-height: 450px;
+  /* border-top: 7px solid white; */
+  /* border-bottom: 7px solid white; */
+  /* background-image: url(images/wave.webp); */
+  background-size: cover;
+  background-color: #99E1D9;
+  border-radius: 5%;
+
+
+
 }
 .aboutTitle{
   justify-content: center;
   font-family: 'JetBrains Mono';
   font-size: 40px;
-  color: white;
+  color: #708BAF;
 
 }
 .aboutPageRow {
   width: 100%;
   display: flex;
   align-items: center;
+  /* border: 5px solid white;
+  border-radius: 5%; */
 }
+
 
 .aboutTxt{
   display: flex;
@@ -119,7 +104,8 @@ body {
   height: 100%;
   font-family: 'JetBrains Mono';
   font-size: 23px;
-  color: white;
+  color: #32292F;
+
 }
 .aboutImg{
   width: 30%; 
@@ -128,7 +114,7 @@ body {
 }
 
 .aboutMeImage{
-  border: 3px solid white;
+  border: 3px solid #32292F;
   
   border-radius: 40px;
   width: 80%;
@@ -136,11 +122,14 @@ body {
 }
 
 .skillsPage{
+  padding-top: 50px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   color: white;
   position: relative; /* To contain the absolutely positioned particles */
   /* z-index: 1; */
+
 
   
 }
@@ -151,23 +140,36 @@ body {
   font-size: 40px;
   justify-content: center;
   padding-bottom:10px ;
+  padding-top: 50px;
+  padding-bottom: 70px;
+
+
 
 }
-.languageScreen{
+
+.skills{
   display: flex;
-  background-color: rgb(30, 32, 54);
+  animation: moveSkills 30s linear infinite;
+}
+.languageScreen{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  overflow: hidden;
+  display: flex;
   justify-content: center;
-  width: 70%;
-  height: 80%;  
-  padding-left: 100px;
+  height: 100%;  
+  width: 99.5%;
   align-self: center;
   align-items: center;
-  border-radius: 200px;
-  border: 10px solid white;
+  border-top: 8px solid  #708BAF;
+  border-bottom: 8px solid  #708BAF;
+  /* border-radius: 50px; */
+  /* border: 10px solid white; */
   flex-direction: row;
   flex-wrap: wrap;
   z-index: 1;
 }
+
 .languageName{
   display: flex;
   justify-content: center;
@@ -175,10 +177,14 @@ body {
   margin: 0;
   font-size: 30px; 
 }
+
+
 .language{
   display: flex;
   flex-direction: column;
-  padding: 30px 60px 30px 60px;
+  align-self: center;
+  padding: 0 70px; /* Adjust spacing between skills */
+  font-size: 1.5rem; /* Adjust font size as needed */
   align-items: center;
 }
 .languageTechnology{
@@ -188,7 +194,14 @@ body {
   font-size: 20px; 
   margin: 0;
 }
-
+@keyframes moveSkills {
+  0% {
+      transform: translateX(20%);
+  }
+  100% {
+      transform: translateX(-30%);
+  }
+}
 
 .logo {
   display: flex;
@@ -202,7 +215,7 @@ body {
 
 .logo:hover{
   scale: 1.1;
-  transition: o.5s;
+  transition: 0.5s;
 }
 
 .nav-links {
@@ -216,8 +229,8 @@ body {
 
 .navOption {
   display: flex;
-  color: white;
-  height: 45px;
+  color: #F0F7F4;
+    height: 45px;
   width: 120px;
   align-items: center;
   justify-content: center;
@@ -227,8 +240,7 @@ body {
 .navOptionText:hover{
   scale: 1.1;
   transition: o.5s;
-  color: grey;
-
+  color: #708BAF  
 }
 
 
@@ -240,7 +252,7 @@ body {
 }
 .linkedin:hover{
   scale: 1.1;
-  transition: o.5s;
+  transition: 0.5s;
 }
 
 .github {
@@ -249,13 +261,13 @@ body {
 }
 .github:hover{
   scale: 1.1;
-  transition: o.5s;
+  transition: 0.5s;
 }
 .navOptionText {
   font-family: 'Inter';
   font-weight:normal;
   font-size: 18px;
-  color: white;
+  color: #F0F7F4;
   text-decoration: none;
   cursor: pointer;
 }
@@ -266,7 +278,7 @@ body {
   font-family: 'JetBrains Mono';
   font-size: 40px;
   justify-content: center;
-  padding-bottom:20px ;
+  padding-bottom:70px ;
   padding-top: 90px;
 }
 .projectsPage{
@@ -276,12 +288,16 @@ body {
   color: white;
   font-family: 'Inter';
   font-size: 35px;
+  /* border-top: 7px solid white; */
+
 }
 .projectScreen{
   display: flex;
   flex-direction: row;
   justify-content: center; 
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
+  font-family: 'JetBrains Mono';
+   
 }
 .project{
   padding: 40px;
@@ -293,71 +309,15 @@ body {
   display: block;
     transition: opacity 0.3s ease; /* Smooth transition */
 }
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgb(41, 41, 82);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  padding: 10px;
-  background-size: cover;
-}
+
 
 .githubP {
-  align-self: flex-end; 
+  /* align-self: flex-end;  */
   width: 35px;
   height: 35px;
   /* padding-left: 270px; */
-  /* text-align: center; */
+  text-align: center;
 
-}
-
-#wedge{
-  /* background-color:rgb(20, 108, 12) ; */
-  background-image: url(images/wedgeBlur.jpg);
-}
-#crossy{
-  /* background-color: rgb(41, 41, 82); */
-  background-image: url("images/crossyBlur.png");
-}
-#RSA{
-  /* background-color: rgb(54, 97, 106); */
-  background-image: url(images/rsaBlur.jpg);
-}
-#PDF{
-  /* background-color: rgb(236, 68, 44); */
-  background-image: url(images/pdfBlur.png);
-}
-
-.projectName{
-  display: flex;
-  justify-content: center;
-  margin: 2px;
-  font-family: 'Jetbrains Mono';
-}
-.projectOverlay {
-  position: relative;
-  width: 100%;
-  max-width: 600px; /* Adjust as needed */
-  overflow: hidden; /* Ensure no overflow */
-  border-radius: 40px;
-
-}
-
-.projectOverlay:hover .projectImage {
-    opacity: 0;
-}
-
-.projectOverlay:hover .overlay {
-    opacity: 1;
 }
 
 
@@ -368,69 +328,243 @@ body {
   font-size: 20px;
   font-family: 'Jetbrains Mono';
 }
-.saturn{
-  padding-left: 170px;
-  width: 300px;
-  height: 250px;
-  padding-top: 70px;
-  border-radius: 100%;
-  object-fit: cover;
-  
-  /* z-index: 1; */
-}
+
 
 .githubP:hover{
   scale: 1.1;
   transition: o.5s;
 }
 .navOptionText.active {
-  color: grey;
+  color: #708BAF;
 }
 
-.hobbiesPage{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: 'JetBrains Mono';
-}
 
-.hobbiesTitle{
-  font-size: 40px;
-  color: white;
-  padding: 40px;
-}
-.hobbieScreen{
-  display: flex;
-  flex-direction: row;
-  justify-content:center;
-  /* align-items: center; */
-  align-self: center;
-}
-.hobbieText{
-  padding: 20px;
-  color: white;
-  font-size: 30px;
-  padding-left: 50px;
-  padding-right: 50px;
-  width: 40%;
-  /* text-align: center; */
-}
 
-.hobbieImage{
-  width: 300px;
-  height: 380px;
-  border-radius: 50px;
-  /* padding: 50px; */
-  border: 3px solid white;;
-}
 #particles {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 50%;
 
 
-  /* top: 0;
-  left: 0; */
+  top: 0;
+  left: 0;
   /* z-index: -1;   */
+}
+
+
+.timeline {
+  position: relative;
+  /* max-width: 1000px; */
+  width: 80%;
+  /* margin: auto; */
+  display: flex;
+  flex-direction: column;
+}
+.project-indent{
+  padding-left: 50px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 37%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #708BAF;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding: 70px 0;
+  display: flex;
+  align-items: center;
+}
+
+.inP{
+  width: 35px;
+  height: 35px;
+}
+.timeline-dot {
+  position: absolute;
+  left: 37%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #708BAF;
+  border-radius: 50%;
+}
+
+.project-name {
+  padding-left: 50px;
+  width: 30%;
+  margin-right: 90px;
+  text-align: center;
+  font-weight: bold;
+  /* width: 30%; */
+  position: relative;
+  padding-right: 20px;
+
+}
+
+.project-name::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -115px; /* Adjust to control the length of the line */
+  width: 140px;
+  height: 4px;
+  background-color: #708BAF;
+}
+
+
+.project-description {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px; 
+  background-color: #708BAF;
+  border: 5px solid #708BAF;
+  border-radius: 40px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 600px;
+  color: #F0F7F4;
+  position: relative;
+  font-size: 20px;
+}
+
+/* .project-description::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -7px; 
+  width: 60px;
+  height: 4px;
+  background-color: #708BAF;
+} */
+
+.bracket {
+  font-weight: bold;
+  margin-bottom: 0; 
+}
+
+.greeting {
+  margin: 0; /* Remove extra margin */
+  padding-left: 1.5em; /* Indentation */
+  line-height: 1.2; /* Adjust line height */
+}
+
+.name {
+  font-size: 60px;
+  font-weight: bold;
+  color: #708BAF;
+  margin: 0;
+  padding-left: 1em;
+  line-height: 1.2; /* Adjust line height */
+}
+
+.middle-bracket {
+  margin: 0;
+  padding-left: 2em; /* Indentation */
+}
+
+.description {
+  font-size: 18px;
+  font-weight: bolder;
+  margin: 0;
+  padding-left: 6em;
+  line-height: 1.2; /* Adjust line height */
+}
+
+@media only screen and (max-width: 800px) {
+  .navigation {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .nav-links {
+    display: none; /* You can add a hamburger menu for mobile */
+  }
+
+  .landingPage {
+    height: auto; /* Let the content dictate height on mobile */
+    background-image: none;
+    padding-top: 60px;
+    min-height: 0px;
+  }
+
+  .leftText {
+    font-size: 10px;
+    line-height: 40px;
+    padding: 5% 5%;
+  }
+  .name{
+    font-size: 20px;
+
+  }
+  .description{
+    font-size: 10px;
+  }
+  
+
+
+  .rightText {
+    display: none
+  }
+
+  .aboutPageRow {
+    flex-direction: column; /* Stack content on smaller screens */
+  }
+
+  .aboutTxt, .aboutImg {
+    width: 100%; /* Ensure elements span full width on mobile */
+    padding: 0;
+    text-align: center;
+  }
+
+  .aboutImg {
+    width: 60%; /* Make the image smaller on mobile */
+    padding: 0;
+  }
+
+  .skillsTitle, .projectsTitle {
+    font-size: 28px; /* Scale down titles for smaller screens */
+  }
+
+  .skills, .projectScreen {
+    flex-direction: column; /* Stack skills and projects vertically */
+  }
+
+  .language {
+    padding: 0 30px; /* Adjust spacing between skill items */
+  }
+
+  .timeline {
+    width: 90%; /* Make timeline width fit mobile screens */
+  }
+
+  .timeline::before {
+    left: 50%; /* Center the vertical line for the timeline */
+  }
+
+  .project-name, .project-description {
+    width: 100%; /* Let project content span full width on mobile */
+    padding: 10px;
+  }
+
+  .project-description {
+    font-size: 16px; /* Adjust description font size */
+  }
+  .aboutMePage{
+    padding-top: 0px;
+    
+    border-radius: 0%;
+  
+  
+  
+  }
+  
 }
