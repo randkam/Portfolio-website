@@ -544,8 +544,8 @@ body {
     content: '';
     position: absolute;
     top: 50%;
-    right: -60px; /* Adjust to control the length of the line */
-    width: 100px;
+    right: -80px; /* Adjust to control the length of the line */
+    width: 120px;
     height: 4px;
     background-color: #708BAF;
   }
@@ -558,11 +558,11 @@ body {
   }
 
   .timeline {
-    width: 90%; /* Make timeline width fit mobile screens */
+    width: 100%; /* Make timeline width fit mobile screens */
   }
   .project-description {
     left: -10%;
-    padding: 5px;    width: 100%;
+    padding: 5px;    width: 800px;
     padding-left: 0px;
     padding-right: 20px;
    
