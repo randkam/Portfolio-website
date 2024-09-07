@@ -68,7 +68,8 @@ body {
   flex-direction: column;
   width: 100%;
   height: auto;
-  min-height: 450px;
+
+  /* min-height: 450px; */
   /* border-top: 7px solid white; */
   /* border-bottom: 7px solid white; */
   /* background-image: url(images/wave.webp); */
@@ -430,7 +431,7 @@ body {
   border-radius: 40px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  width: 600px;
+  width: 500px;
   color: #F0F7F4;
   position: relative;
   font-size: 20px;
@@ -514,6 +515,10 @@ body {
   .rightText {
     display: none
   }
+  .aboutMePage{
+    padding-top: 5px;
+    padding-bottom:5px ;
+  }
 
   .aboutPageRow {
     flex-direction: column; /* Stack content on smaller screens */
@@ -523,20 +528,30 @@ body {
     width: 100%; /* Ensure elements span full width on mobile */
     padding: 0;
     text-align: center;
+    font-size: 10px;
   }
 
   .aboutImg {
-    width: 60%; /* Make the image smaller on mobile */
+    width: 28%; /* Make the image smaller on mobile */
+    height: 40%;
     padding: 0;
   }
 
   .skillsTitle, .projectsTitle {
     font-size: 28px; /* Scale down titles for smaller screens */
   }
-
-  .skills, .projectScreen {
-    flex-direction: column; /* Stack skills and projects vertically */
+  .project-name::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -60px; /* Adjust to control the length of the line */
+    width: 100px;
+    height: 4px;
+    background-color: #708BAF;
   }
+
+
+
 
   .language {
     padding: 0 30px; /* Adjust spacing between skill items */
@@ -545,18 +560,38 @@ body {
   .timeline {
     width: 90%; /* Make timeline width fit mobile screens */
   }
+  .project-description {
+    left: -10%;
+    padding: 5px;    width: 100%;
+    padding-left: 0px;
+    padding-right: 20px;
+   
+  }
+  
 
   .timeline::before {
-    left: 50%; /* Center the vertical line for the timeline */
+    left: 37%; /* Center the vertical line for the timeline */
   }
 
-  .project-name, .project-description {
-    width: 100%; /* Let project content span full width on mobile */
-    padding: 10px;
+  .timeline-dot {
+    left: 37%;
+  }
+  .project-name {
+    width: 100%;
+    padding: 5px;
+  }
+  .project-name{
+    font-size: 18px;
+    padding-right: 50px;
   }
 
+
+  .project-indent{
+    padding-left: 10px;
+  }
   .project-description {
-    font-size: 16px; /* Adjust description font size */
+    font-size: 7px; /* Adjust description font size */
+    padding-right: 5px;
   }
   .aboutMePage{
     padding-top: 0px;
