@@ -67,7 +67,7 @@ body {
 }
 
 .aboutMePage{
-  padding-top: 50px;
+  /* padding-top: 50px; */
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -76,7 +76,7 @@ body {
   height: auto;
 
   /* min-height: 450px; */
-  border-top: 5px solid #F0F7F4;
+  /* border-top: 5px solid #F0F7F4; */
   /* border-bottom: 5px solid #F0F7F4; */
   /* background-image: url(images/wave.webp); */
   background-size: cover;
@@ -147,7 +147,7 @@ body {
   color: #708BAF;
   justify-content: center;
   padding-bottom:10px ;
-  padding-top: 50px;
+  padding-top: 100px;
   /* padding-bottom: 70px; */
 
 
@@ -164,8 +164,9 @@ body {
 
 .languageScreen {
     padding: 20px 0;
+    /* padding-top: 50px; */
     width: 100%;
-    border-bottom: 8px solid #F0F7F4;
+    /* border-bottom: 8px solid #F0F7F4; */
     z-index: 1;
 }
 
@@ -269,6 +270,7 @@ body {
 }
 
 .projectsTitle{
+  color: #708BAF;
   font-weight: bold;
   display: flex;
   font-family: 'JetBrains Mono';
