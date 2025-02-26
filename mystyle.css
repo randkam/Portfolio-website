@@ -534,7 +534,7 @@ body {
   }
 
   .skillsTitle, .projectsTitle {
-    font-size: 28px; /* Scale down titles for smaller screens */
+    font-size: 20px; /* Scale down titles for smaller screens */
   }
   .project-name::after {
     content: '';
@@ -583,10 +583,10 @@ body {
 
 
   .project-indent{
-    padding-left: 10px;
+    /* padding-left: 10px; */
   }
   .project-description {
-    font-size: 7px; /* Adjust description font size */
+    font-size: 10px; /* Adjust description font size */
     padding-right: 5px;
   }
   .aboutMePage{
@@ -594,8 +594,89 @@ body {
     
     border-radius: 0%;
   
-  
-  
   }
+
+.skillsPage{
+  /* padding-top: 50px; */
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  position: relative; /* To contain the absolutely positioned particles */
+  /* z-index: 1; */
+  position: relative;
+  z-index: 1;
+}
+.aboutTitle{
+  font-size: 20px;
+}
+.skillsTitle{
+  font-weight: bold;
+  display: flex;
+  font-family: 'JetBrains Mono';
+  font-size: 20px;
+  color: #708BAF;
+  justify-content: center;
+  padding-bottom:10px ;
+  padding-top: 100px;
+  /* padding-bottom: 70px; */
+
+
+
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+}
+
+.languageScreen {
+    padding: 0px 0;
+    /* padding-top: 50px; */
+    width: 100%;
+    /* border-bottom: 8px solid #F0F7F4; */
+    z-index: 1;
+}
+
+.language {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px;
+    transition: transform 0.5s ease;
+}
+
+.language:hover {
+    transform: scale(1.1);
+}
+.languageIcon{
+  width: 40px;
+  height: 40px;
+}
+
+.languageName{
+  display: flex;
+  justify-content: center;
+  font-family: 'Jetbrains Mono';
+  margin: 0;
+  font-weight: bolder;
+  font-size: 10px; 
+}
+
+.languageTechnology{
+  display: flex;
+  justify-content: center;
+  font-family: 'Jetbrains Mono';
+  font-weight: bolder;
+  font-size: 7px; 
+    margin: 0;
+}
+
+.project-name{
+  font-size: 15px;
+}
   
 }
