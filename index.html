@@ -51,8 +51,8 @@
             <p class="greeting">Hello, my name is</p>
             <h1 class="name">Rand Kamaleddine</h1>
             <p class="bracket middle-bracket">{</p> <!-- Middle bracket -->
-            <p class="description">Software Developer | Computer Science Student</p>
-            <p class="bracket middle-bracket">}</p> <!-- Middle bracket -->
+                <p id="description" class="description">Software Developer</p>
+                <p class="bracket middle-bracket">}</p> <!-- Middle bracket -->
             <p class="bracket">}</p>
         </div>
         
@@ -223,6 +223,49 @@
   
     
     <script>
+   document.addEventListener("DOMContentLoaded", function () {
+        const descriptions = [
+            "Software Developer",
+            "Database Developer",
+            "Computer Science Student"
+        ];
+
+        let index = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const descriptionElement = document.getElementById("description");
+
+        function typeEffect() {
+            const currentText = descriptions[index];
+
+            if (!isDeleting) {
+                // Typing letters one by one
+                descriptionElement.textContent = currentText.substring(0, charIndex++);
+            } else {
+                // Deleting letters one by one
+                descriptionElement.textContent = currentText.substring(0, charIndex--);
+            }
+
+            let typingSpeed = isDeleting ? 100: 100; // Faster deleting speed
+
+            if (!isDeleting && charIndex > currentText.length) {
+                // Finished typing the word, pause before deleting
+                typingSpeed = 1500;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 1) {
+                // Finished deleting, move to next word
+                isDeleting = false;
+                index = (index + 1) % descriptions.length;
+                typingSpeed = 100; // Short pause before typing new word
+            }
+
+            setTimeout(typeEffect, typingSpeed);
+        }
+
+        typeEffect(); // Start animation
+    });
+
+
         //about me button
         document.getElementById('navOptionAbout').addEventListener('click', function() {
             const targetPage = document.querySelector('.aboutMePage ');
