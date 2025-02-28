@@ -246,7 +246,7 @@
                 descriptionElement.textContent = currentText.substring(0, charIndex--);
             }
 
-            let typingSpeed = isDeleting ? 100: 100; // Faster deleting speed
+            let typingSpeed = isDeleting ? 35: 50; // Faster deleting speed
 
             if (!isDeleting && charIndex > currentText.length) {
                 // Finished typing the word, pause before deleting
