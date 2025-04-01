@@ -269,27 +269,7 @@ body {
   cursor: pointer;
 }
 
-.projectsTitle{
-  color: #708BAF;
-  font-weight: bold;
-  display: flex;
-  font-family: 'JetBrains Mono';
-  font-size: 40px;
-  justify-content: center;
-  padding-bottom:70px ;
-  padding-top: 90px;
-}
-.projectsPage{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
-  font-family: 'Inter';
-  font-size: 35px;
-  /* border-top: 7px solid white; */
-  position: relative;
-  z-index: 1;
-}
+
 .projectScreen{
   display: flex;
   flex-direction: row;
@@ -475,6 +455,192 @@ body {
   padding-left: 6em;
   line-height: 1.2; 
 }
+
+
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  width: 80%;
+  padding: 20px;
+}
+.projectsTitle{
+  color: #708BAF;
+  font-weight: bold;
+  display: flex;
+  font-family: 'Jetbrains Mono';
+  font-size: 40px;
+  justify-content: center;
+  padding-bottom:70px ;
+  padding-top: 120px;
+}
+.projectsPage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Jetbrains Mono';
+    font-size: 35px;
+  position: relative;
+  z-index: 1;
+}
+
+.projectCard {
+  background-color: #708BAF;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  margin: 20px;
+
+}
+
+.projectCard:hover {
+  transform: scale(1.05);
+}
+
+.projectImage {
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+  background-color: white; /* Optional: adds a background in case the image doesn't fill the space */
+  border-radius: 0px 0px 15px 15px;
+}
+
+.projectInfo {
+  padding: 20px;
+}
+
+.projectName {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.projectDescription {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.project-button {
+  background-color: #99E1D9; /* Button background color */
+  color: #F0F7F4; /* Button text color */
+  padding: 10px 20px; /* Padding for the button */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; 
+  transition: transform 0.5s ease; /* Smooth transition for scaling */
+  display: inline-block; 
+  width: 230px;
+}
+
+.project-button:hover {
+  transform: scale(1.1); /* Scale effect on hover */
+}
+
+.detailedDescription {
+  font-family: 'Jetbrains Mono';
+  font-size: 60%;
+  display: none; 
+  background-color: #708BAF; 
+  color: #F0F7F4; 
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  text-align: left;
+}
+.toggle {
+  display: none; /* Hide the checkbox */
+}
+
+.detailedDescription {
+  font-family: 'Jetbrains Mono';
+  font-size: 60%;
+  display: none; 
+  background-color: #708BAF; 
+  color: #F0F7F4; 
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+
+
+.projectCard.active {
+  background-color: #708BAF; /* Change background color when active */
+}
+/* When the checkbox is checked, hide the initial view elements */
+.toggle:checked ~ .projectImage,
+.toggle:checked ~ .projectInfo .projectName,
+.toggle:checked ~ .projectInfo .projectDescription,
+.toggle:checked ~ .projectInfo .learnMore {
+  display: none;
+}
+
+.toggle:checked ~ .projectInfo .detailedDescription {
+  display: block;
+}
+
+
+/* Assume these elements are wrapped in a container, or individually targeted */
+.toggle:checked ~ .projectImage,
+.toggle:checked ~ .projectInfo .projectName,
+.toggle:checked ~ .projectInfo .projectDescription,
+.toggle:checked ~ .projectInfo .learnMore {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+
+
+
+
+
+.projectImage {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  background-color: white; /* Optional: adds a background in case the image doesn't fill the space */
+  border-radius: 0px 0px 15px 15px;
+}
+.projectImage.contain {
+  object-fit: contain; /* Use contain for specific images */
+}
+.projectInfo {
+  padding: 20px;
+}
+.projectButton {
+  background-color: #32292F;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.projectButtons {
+  justify-content: center;
+  display: flex;
+  align-items: center; /* vertically centers the items */
+  gap: 10px; /* optional: space between the button and the logo */
+}
+
+
+.projectButton:hover {
+  background-color: #5a6f91;
+}
+
+
+
 
 @media only screen and (max-width: 800px) {
   .navigation {
