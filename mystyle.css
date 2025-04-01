@@ -474,6 +474,7 @@ body {
   justify-content: center;
   padding-bottom:70px ;
   padding-top: 120px;
+  position: relative;
 }
 .projectsPage{
   display: flex;
@@ -518,6 +519,9 @@ body {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
+  position: relative;
+  height: 50px; /* Fixed height to prevent layout shifts */
+
 }
 
 .projectDescription {
@@ -545,7 +549,7 @@ body {
 }
 
 .detailedDescription {
-  font-family: 'Jetbrains Mono';
+   font-family: 'Inter';
   font-size: 60%;
   display: none; 
   background-color: #708BAF; 
@@ -555,34 +559,18 @@ body {
   margin-top: 10px;
   text-align: left;
 }
+
+
 .toggle {
   display: none; /* Hide the checkbox */
 }
-
-.detailedDescription {
-  font-family: 'Jetbrains Mono';
-  font-size: 60%;
-  display: none; 
-  background-color: #708BAF; 
-  color: #F0F7F4; 
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 10px;
-  text-align: left;
-}
-
-
-
-.projectCard.active {
-  background-color: #708BAF; /* Change background color when active */
-}
 /* When the checkbox is checked, hide the initial view elements */
-.toggle:checked ~ .projectImage,
+/* .toggle:checked ~ .projectImage,
 .toggle:checked ~ .projectInfo .projectName,
 .toggle:checked ~ .projectInfo .projectDescription,
 .toggle:checked ~ .projectInfo .learnMore {
   display: none;
-}
+} */
 
 .toggle:checked ~ .projectInfo .detailedDescription {
   display: block;
@@ -590,13 +578,13 @@ body {
 
 
 /* Assume these elements are wrapped in a container, or individually targeted */
-.toggle:checked ~ .projectImage,
+/* .toggle:checked ~ .projectImage,
 .toggle:checked ~ .projectInfo .projectName,
 .toggle:checked ~ .projectInfo .projectDescription,
 .toggle:checked ~ .projectInfo .learnMore {
   opacity: 0;
   transition: opacity 0.3s ease;
-}
+} */
 
 
 
@@ -630,8 +618,19 @@ body {
 .projectButtons {
   justify-content: center;
   display: flex;
-  align-items: center; /* vertically centers the items */
-  gap: 10px; /* optional: space between the button and the logo */
+  align-items: center;
+  gap: 10px;
+  height: 50px; /* Fixed height to prevent layout shifts */
+  position: relative; /* Ensures consistent positioning */
+}
+
+/* When toggled, hide but preserve space */
+.toggle:checked ~ .projectInfo .projectButtons {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-20px);
+  position: relative; /* Keep in document flow */
+  pointer-events: none;
 }
 
 
@@ -639,7 +638,50 @@ body {
   background-color: #5a6f91;
 }
 
+ul li {
+  padding-bottom: 10px; /* Adjust the value to suit your needs */
+}
 
+/* Transition styles for project cards */
+.projectImage,
+.projectInfo .projectName,
+.projectInfo .projectDescription,
+.projectInfo .projectButtons,
+.projectInfo .detailedDescription {
+  transition: opacity 0.4s ease, transform 0.9s ease;
+}
+
+/* Initial state for detailed description */
+.projectInfo .detailedDescription {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Toggle state adjustments */
+.toggle:checked ~ .projectInfo .detailedDescription {
+  opacity: 1;
+  transform: translateY(0);
+  position: relative;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+/* Elements to fade out when toggled */
+.toggle:checked ~ .projectImage,
+.toggle:checked ~ .projectInfo .projectName,
+.toggle:checked ~ .projectInfo .projectDescription,
+.toggle:checked ~ .projectInfo .projectButtons {
+  opacity: 0;
+  transform: translateY(-20px);
+  position: absolute;
+  pointer-events: none;
+}
 
 
 @media only screen and (max-width: 800px) {
@@ -748,9 +790,6 @@ body {
   }
 
 
-  .project-indent{
-    /* padding-left: 10px; */
-  }
   .project-description {
     font-size: 10px; /* Adjust description font size */
     padding-right: 5px;

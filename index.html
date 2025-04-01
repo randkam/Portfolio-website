@@ -379,7 +379,114 @@ particlesJS('particles', {
 //     });
 // };
 
-
+// Smooth transitions for project cards
+document.addEventListener("DOMContentLoaded", function() {
+    // Get all "Learn More" and "Close" buttons
+    const learnMoreButtons = document.querySelectorAll('.projectButton.learnMore');
+    const closeButtons = document.querySelectorAll('.projectButton.close');
+    
+    // Add click handlers for learn more buttons
+    learnMoreButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Get the corresponding card container
+            const card = this.closest('.projectCard');
+            
+            // Get elements that need to be animated
+            const initialElements = [
+                card.querySelector('.projectImage'),
+                card.querySelector('.projectName'),
+                card.querySelector('.projectDescription'),
+                card.querySelector('.projectButtons')
+            ];
+            
+            const detailedDescription = card.querySelector('.detailedDescription');
+            
+            // Apply transitions
+            initialElements.forEach(el => {
+                if (el) {
+                    el.style.transition = 'opacity 0.9s ease, transform 0.4s ease';
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(-20px)';
+                }
+            });
+            
+            // Show detailed description with delay
+            setTimeout(() => {
+                if (detailedDescription) {
+                    detailedDescription.style.transition = 'opacity 0.9s ease, transform 0.4s ease';
+                    detailedDescription.style.opacity = '1';
+                    detailedDescription.style.transform = 'translateY(0)';
+                    detailedDescription.style.position = 'relative';
+                    detailedDescription.style.pointerEvents = 'auto';
+                    detailedDescription.style.zIndex = '1';
+                }
+                
+                // Apply "display: none" after transition completes
+                setTimeout(() => {
+                    initialElements.forEach(el => {
+                        if (el) el.style.display = 'none';
+                    });
+                }, 400);
+            }, 300);
+        });
+    });
+    
+    // Add click handlers for close buttons
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Get the corresponding card container
+            const card = this.closest('.projectCard');
+            
+            // Get elements that need to be animated
+            const initialElements = [
+                card.querySelector('.projectImage'),
+                card.querySelector('.projectName'),
+                card.querySelector('.projectDescription'),
+                card.querySelector('.projectButtons')
+            ];
+            
+            const detailedDescription = card.querySelector('.detailedDescription');
+            
+            // Hide detailed description
+            if (detailedDescription) {
+                detailedDescription.style.opacity = '0';
+                detailedDescription.style.transform = 'translateY(20px)';
+            }
+            
+            // Prepare initial elements for showing
+            initialElements.forEach(el => {
+                if (el) {
+                    el.style.display = '';
+                    // Force a reflow before changing other properties
+                    void el.offsetWidth;
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(-20px)';
+                    el.style.position = '';
+                    el.style.pointerEvents = '';
+                }
+            });
+            
+            // Show initial elements with delay
+            setTimeout(() => {
+                initialElements.forEach(el => {
+                    if (el) {
+                        el.style.opacity = '1';
+                        el.style.transform = 'translateY(0)';
+                    }
+                });
+                
+                // Hide detailed description completely after transition
+                setTimeout(() => {
+                    if (detailedDescription) {
+                        detailedDescription.style.position = 'absolute';
+                        detailedDescription.style.pointerEvents = 'none';
+                        detailedDescription.style.zIndex = '-1';
+                    }
+                }, 400);
+            }, 300);
+        });
+    });
+});
 
 
         
