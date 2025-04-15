@@ -206,9 +206,9 @@ body {
   justify-content: flex-start;
   align-items: center;
   align-content: flex-start;
-  width: 80px;
-  padding: 0px 0px 0px 0px;
-  height: 80px;
+  width: 100px;
+  padding: 0px 0px 0px 10px;
+  height: 90px;
 }
 
 .logo:hover{
@@ -647,7 +647,7 @@ ul li {
 }
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   .navigation {
     flex-direction: column;
     height: auto;
@@ -665,16 +665,16 @@ ul li {
   }
 
   .leftText {
-    font-size: 10px;
+    font-size: 20px;
     line-height: 40px;
     padding: 5% 5%;
   }
   .name{
-    font-size: 20px;
+    font-size: 30px;
 
   }
   .description{
-    font-size: 10px;
+    font-size: 15px;
   }
   
 
@@ -684,28 +684,24 @@ ul li {
   }
   .aboutMePage{
     padding-top: 5px;
-    padding-bottom:5px ;
   }
 
-  .aboutPageRow {
+  /* .aboutPageRow {
     flex-direction: column;
-  }
+  } */
 
   .aboutTxt, .aboutImg {
     width: 100%;
     padding: 0;
-    text-align: center;
-    font-size: 10px;
+    /* font-size: 10px; */
   }
 
   .aboutImg {
-    width: 28%;
-    height: 40%;
-    padding: 0;
+    display: none;
   }
 
   .skillsTitle, .projectsTitle {
-    font-size: 20px;
+    font-size: 40px;
   }
   .project-name::after {
     content: '';
@@ -719,50 +715,16 @@ ul li {
 
 
 
+.aboutTxt{
+  font-size: 20px;
+}
 
-  .language {
-    padding: 0 30px;
-  }
 
   .timeline {
     width: 100%;
   }
-  .project-description {
-    left: -10%;
-    padding: 5px;    width: 800px;
-    padding-left: 0px;
-    padding-right: 20px;
-   
-  }
+ 
   
-
-  .timeline::before {
-    left: 37%;
-  }
-
-  .timeline-dot {
-    left: 37%;
-  }
-  .project-name {
-    width: 100%;
-    padding: 5px;
-  }
-  .project-name{
-    font-size: 18px;
-    padding-right: 50px;
-  }
-
-
-  .project-description {
-    font-size: 10px;
-    padding-right: 5px;
-  }
-  .aboutMePage{
-    padding-top: 0px;
-    
-    border-radius: 0%;
-  
-  }
 
 .skillsPage{
   padding-bottom: 50px;
@@ -774,25 +736,22 @@ ul li {
   z-index: 1;
 }
 .aboutTitle{
-  font-size: 20px;
+  font-size: 30px;
 }
 .skillsTitle{
   font-weight: bold;
   display: flex;
-  font-family: 'JetBrains Mono';
-  font-size: 20px;
-  color: #708BAF;
+  font-size: 30px;
+  color: #F0F7F4;
   justify-content: center;
   padding-bottom:10px ;
-  padding-top: 100px;
 }
 
 .skills {
     display: flex;
     flex-wrap: wrap;
+    padding: 10px;
     justify-content: center;
-    gap: 30px;
-    padding: 40px;
 }
 
 .languageScreen {
@@ -805,7 +764,6 @@ ul li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2px;
     transition: transform 0.5s ease;
 }
 
@@ -817,14 +775,7 @@ ul li {
   height: 40px;
 }
 
-.languageName{
-  display: flex;
-  justify-content: center;
-  font-family: 'Jetbrains Mono';
-  margin: 0;
-  font-weight: bolder;
-  font-size: 10px; 
-}
+
 
 .languageTechnology{
   display: flex;
