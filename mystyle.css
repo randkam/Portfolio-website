@@ -291,6 +291,7 @@ body {
 }
 
 
+
 .githubP {
   width: 35px;
   height: 35px;
@@ -568,6 +569,13 @@ body {
 .projectImage.contain {
   object-fit: contain;
 }
+
+.projectImage.matchup {
+  object-fit:contain;
+
+}
+
+
 
 .projectInfo {
   padding: 20px;
