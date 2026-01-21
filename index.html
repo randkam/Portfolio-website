@@ -2,14 +2,14 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="mystyle.css">
     <link href='https://fonts.googleapis.com/css?family=Inter|Poppins|Roboto&display=swap' rel='stylesheet'>  
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'> 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
  
 </head>
 
@@ -65,13 +65,28 @@
         </div>
     </div>
 
-    <div class="aboutMePage">
+    <div class="aboutMePage" id="aboutMePage">
         <t class = "aboutTitle">About Me</t>
         <div class="aboutPageRow">
             <div class="aboutTxt">
-                <ul class="aboutMeText"><li>Currently pursuing a degree in <span style =" color: #99E1D9; font-weight: bold;">Computer science</span> with a minor in Mathematics at the University of Guelph.</li> </ul>
-                <ul class="aboutMeText"><li>With my professional experience in  <span style =" color: #99E1D9; font-weight: bolder;">full-stack</span> development and <span style ="color: #99E1D9; font-weight: bold;">databases</span>, I am aiming to leverage my skills to contribute to innovative projects.</li> </ul>
-                <ul class="aboutMeText"><li> Background in team sports, which has honed my teamwork and collaboration skills.</li> </ul>
+
+                <!-- <div class="aboutPills" aria-label="Quick highlights">
+                    <span class="aboutPill">Computer Science @ UofG</span>
+                    <span class="aboutPill">QuickPDF</span>
+                    <span class="aboutPill">MatchUp</span>
+                </div> -->
+
+                <ul class="aboutMeText"><li>Currently pursuing a degree in <span class="highlight">Computer Science</span> with a minor in Mathematics at the University of Guelph.</li></ul>
+                <ul class="aboutMeText">
+                    <li>Outside of class, you'll find me:
+                        <ul class="subBullets">
+                            <li>Building new features for <span class="highlight">QuickPDF</span></li>
+                            <li>Prepping <span class="highlight">MatchUp</span> for launch</li>
+                            <li>Networking for my next internship opportunity</li>
+                            <li>Staying active at the gym, on the basketball court, playing soccer, or on the ice for hockey</li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
             <div class = "aboutImg">
                 <img class="aboutMeImage" src="images/selfPortrait.png">	
@@ -125,95 +140,200 @@
         </div>
     </div>
 
+    <!-- Project Modal -->
+    <div class="projectModal" id="projectModal">
+        <div class="modalOverlay"></div>
+        <div class="modalContent">
+            <button class="modalClose">&times;</button>
+            <div class="modalHeader">
+                <h2 class="modalTitle"></h2>
+                <div class="modalTechBadges"></div>
+            </div>
+            <div class="modalBody"></div>
+            <div class="modalFooter">
+                <a href="#" class="modalGithubLink" target="_blank">
+                    <img src="images/github-white.png" alt="GitHub">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
     <div class="projectsPage">
-        <t class="projectsTitle">Projects</t>
+        <t class="projectsTitle">Featured Projects</t>
         <div class="projectGrid">
             <div class="projectCard">
-                <input type="checkbox" id="matchupCheckbox" class="toggle" />
-                <img class="projectImage matchup" id="matchupVideo" src="images/matchUpLogo.png" >
+                <div class="projectImageContainer projectCarousel">
+                    <div class="carouselSlides">
+                        <img class="projectImage carouselImage active" src="images/matchup-1.png" alt="MatchUp App Screen 1">
+                        <img class="projectImage carouselImage" src="images/matchup-2.png" alt="MatchUp App Screen 2">
+                        <img class="projectImage carouselImage" src="images/matchup-3.png" alt="MatchUp App Screen 3">
+                        <img class="projectImage carouselImage" src="images/matchup-4.png" alt="MatchUp App Screen 4">
+                    </div>
+                    <button class="carouselArrow carouselArrowLeft">‹</button>
+                    <button class="carouselArrow carouselArrowRight">›</button>
+                    <div class="carouselDots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                        <span class="dot" data-slide="3"></span>
+                    </div>
+                    <div class="projectTechStack">
+                        <span class="techBadge">Swift</span>
+                        <span class="techBadge">Spring Boot</span>
+                        <span class="techBadge">MySQL</span>
+                    </div>
+                </div>
                 <div class="projectInfo">
                     <h3 class="projectName">MatchUp App</h3>
-                    <p class="projectDescription">The ultimate companion for basketball pickup games in Toronto.</p>
+                    <p class="projectDescription">Tournament hosting platform with live bracket updates, team creation and invites, real-time activity tracking, and detailed player statistics.</p>
                     <div class="projectButtons">
-                        <label class="projectButton learnMore" for="matchupCheckbox">Learn More</label>
-                        <a href="https://github.com/randkam/matchup">
-                            <img class="github" src="images/github-white.png" alt="GitHub">
-                        </a>
+                        <button class="projectButton learnMore">Learn More</button>
+                        <span class="statusBadge marketing">📢 Marketing Stage</span>
                     </div>
-                    
-                    <div class="detailedDescription">
-                        <ul>
-                            <li>Developed a full-stack mobile app using Swift and Spring Boot to connect Toronto's basketball community.</li>
-                            <li>Integrated live group chats for each basketball court using web-sockets, allowing users to connect and make friends.</li>
-                            <li>Implemented features such as user authentication, location-based chat access, and personalized user interactions by using a MySQL database to manage user and location data and a Java Spring Boot back-end to handle API requests, achieving a seamless user experience.</li>
-                        </ul>
-                        <label class="projectButton close" for="matchupCheckbox">Close</label>
+                    <div class="detailedDescription" style="display: none;">
+                        <p style="margin-bottom: 20px; color: #E8F0F2; font-size: 18px; line-height: 1.8;">A tournament hosting application featuring live bracket updates, team creation and invites, real-time activity updates, and detailed tracking of team and individual player stats.</p>
+                        <h4 style="color: #99E1D9; margin-bottom: 15px; font-size: 20px;">Current Status</h4>
+                        <p style="color: #E8F0F2; font-size: 17px;">📢 <strong>Marketing Stage</strong> - Organizing content to spread the word about the app and platform.</p>
                     </div>
                 </div>
               </div>
               
             <div class="projectCard">
-                <input type="checkbox" id="quickPDFCheckbox" class="toggle" />
-                <img class="projectImage contain" src="images/QuickPDF.png">
+                <div class="projectImageContainer projectCarousel">
+                    <div class="carouselSlides">
+                        <img class="projectImage carouselImage active" src="images/quickpdf-preview.png" alt="QuickPDF Preview">
+                    </div>
+                    <div class="projectTechStack">
+                        <span class="techBadge">React</span>
+                        <span class="techBadge">Python</span>
+                        <span class="techBadge">Flask</span>
+                    </div>
+                </div>
                 <div class="projectInfo">
                     <h3 class="projectName">QuickPDF</h3>
-                    <p class="projectDescription">Web app developed in React.js and Python using Flask for performing operations on PDFs.</p>
+                    <p class="projectDescription">Full-stack PDF utility using React, Flask, Redis, and Docker with asynchronous processing and secure file handling. Trusted by 100+ users.</p>
                     <div class="projectButtons">
-                        <label class="projectButton learnMore" for="quickPDFCheckbox">Learn More</label>
-                        <a href="https://github.com/randkam/QuickPDF">
+                        <button class="projectButton learnMore">Learn More</button>
+                        <a href="https://quick-pdf.netlify.app" class="projectLinkBadge webappBadge" target="_blank">
+                            🌐 Check It Out!
+                        </a>
+                        <a href="https://github.com/randkam/QuickPDF" class="githubLink" target="_blank">
                             <img class="github" src="images/github-white.png" alt="GitHub">
                         </a>
+                        <span class="statusBadge active">🚀 Adding New Features</span>
                     </div>
-                    <div class="detailedDescription">
-                            <ul>
-                                <li>Developed a web application for PDF operations using React.js and Python with Flask, enabling users to perform various tasks on PDFs (merge, delete, swap, etc.).</li>
-                                <li>Designed the application to prioritize user-friendliness, ensuring seamless navigation, ease of use, and an intuitive interface with responsive Material-UI components.</li>
-                            </ul>
-                        <label class="projectButton close" for="quickPDFCheckbox">Close</label>
+                    <div class="detailedDescription" style="display: none;">
+                        <p style="margin-bottom: 20px; color: #E8F0F2; font-size: 18px; line-height: 1.8;">Full-stack PDF utility web application using React, Flask, Redis, and Docker, with asynchronous background job processing and secure file handling. Early usage by 100+ users.</p>
+                        <h4 style="color: #99E1D9; margin-bottom: 15px; font-size: 20px;">Current Status</h4>
+                        <p style="color: #E8F0F2; font-size: 17px;">🚀 <strong>Adding new features</strong> - stay tuned! 😎</p>
+                        <div class="projectLinks" data-webapp="https://quick-pdf.netlify.app" data-github="https://github.com/randkam/QuickPDF"></div>
                     </div>
                 </div>
             </div>
             <div class="projectCard">
-                <input type="checkbox" id="rsaCheckbox" class="toggle" />
-                <img class="projectImage" src="images/rsa-algorithm-feature.jpg">
+                <div class="projectImageContainer projectCarousel">
+                    <div class="carouselSlides">
+                        <img class="projectImage carouselImage active" src="images/homehero-1.png" alt="HomeHero App Screen 1">
+                        <img class="projectImage carouselImage" src="images/homehero-2.png" alt="HomeHero App Screen 2">
+                        <img class="projectImage carouselImage" src="images/homehero-3.png" alt="HomeHero App Screen 3">
+                        <img class="projectImage carouselImage" src="images/homehero-4.png" alt="HomeHero App Screen 4">
+                        <img class="projectImage carouselImage" src="images/homehero-5.png" alt="HomeHero App Screen 5">
+                    </div>
+                    <button class="carouselArrow carouselArrowLeft">‹</button>
+                    <button class="carouselArrow carouselArrowRight">›</button>
+                    <div class="carouselDots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                        <span class="dot" data-slide="3"></span>
+                        <span class="dot" data-slide="4"></span>
+                    </div>
+                    <div class="projectTechStack">
+                        <span class="techBadge">Swift</span>
+                        <span class="techBadge">Spring Boot</span>
+                        <span class="techBadge">MySQL</span>
+                    </div>
+                </div>
+                <div class="projectInfo">
+                    <h3 class="projectName">HomeHero App</h3>
+                    <p class="projectDescription">Household organizer application built for Hackville 2026 for managing shared tasks, expenses, and shopping lists among roommates.</p>
+                    <div class="projectButtons">
+                        <button class="projectButton learnMore">Learn More</button>
+                        <a href="https://devpost.com/software/homehero-y1k9vh" class="projectLinkBadge devpostBadge" target="_blank">
+                            🏆 Devpost
+                        </a>
+                        <a href="https://github.com/antonioconopio/HomeHero" class="githubLink" target="_blank">
+                            <img class="github" src="images/github-white.png" alt="GitHub">
+                        </a>
+                        <span class="statusBadge expanding">✨ Expanding Features</span>
+                    </div>
+                    <div class="detailedDescription" style="display: none;">
+                        <h4 style="color: #99E1D9; margin-bottom: 15px; font-size: 20px;">Built for Hackville 2026</h4>
+                        <p style="margin-bottom: 20px; color: #E8F0F2; font-size: 18px; line-height: 1.8;">Household organizer application for managing shared tasks, expenses, and shopping lists.</p>
+                        <h4 style="color: #99E1D9; margin-bottom: 15px; font-size: 20px;">Current Status</h4>
+                        <p style="color: #E8F0F2; font-size: 17px;">✨ <strong>Expanding to roommate search</strong> - helping users find compatible living partners!</p>
+                        <div class="projectLinks" data-devpost="https://devpost.com/software/homehero-y1k9vh" data-github="https://github.com/antonioconopio/HomeHero"></div>
+                    </div>
+                </div>
+              </div>
+            <div class="projectCard">
+                <div class="projectImageContainer">
+                    <img class="projectImage" src="images/rsa-algorithm-feature.jpg" alt="RSA Algorithm Preview">
+                    <div class="projectTechStack">
+                        <span class="techBadge">Python</span>
+                        <span class="techBadge">Cryptography</span>
+                    </div>
+                </div>
                 <div class="projectInfo">
                     <h3 class="projectName">RSA Encrypt/Decrypt</h3>
-                    <p class="projectDescription">RSA encryption and decryption algorithms developed from scratch in Python.</p>
+                    <p class="projectDescription">Implementation of RSA cryptographic algorithms from scratch using advanced mathematical concepts.</p>
                     <div class="projectButtons">
-                        <label class="projectButton learnMore" for="rsaCheckbox">Learn More</label>
-                        <a href="https://github.com/randkam/RSA-encrypt-decrypt">
+                        <button class="projectButton learnMore">Learn More</button>
+                        <a href="https://github.com/randkam/RSA-encrypt-decrypt" class="githubLink">
                             <img class="github" src="images/github-white.png" alt="GitHub">
                         </a>
                     </div>
-                    <div class="detailedDescription">
+                    <div class="detailedDescription" style="display: none;">
+                        <h4 style="color: #99E1D9; margin-bottom: 15px; font-size: 20px;">Key Features</h4>
                         <ul>
-                            <li>Developed RSA encryption and decryption algorithms from scratch in Python.</li>
-                            <li>Integrated extended Euclidean algorithm for key generation, modular exponentiation for encryption, and Chinese Remainder Theorem for efficient decryption.</li>
+                            <li>Complete RSA implementation in <strong>pure Python</strong> without external crypto libraries</li>
+                            <li><strong>Extended Euclidean Algorithm</strong> for computing multiplicative inverses</li>
+                            <li><strong>Modular Exponentiation</strong> for efficient encryption operations</li>
+                            <li><strong>Chinese Remainder Theorem</strong> optimization for faster decryption</li>
+                            <li>Prime number generation and primality testing</li>
                         </ul>
-                        <label class="projectButton close" for="rsaCheckbox">Close</label>
                     </div>
                 </div>
             </div>
             <div class="projectCard">
-                <input type="checkbox" id="crossyCheckbox" class="toggle" />
-                <img class="projectImage" id="crossyVideo" src="images/crossy.jpeg"></img>
+                <div class="projectImageContainer">
+                    <img class="projectImage" id="crossyVideo" src="images/crossyRoad.gif" alt="Crossy Road Game Preview">
+                    <div class="projectTechStack">
+                        <span class="techBadge">Python</span>
+                        <span class="techBadge">PyProcessing</span>
+                        <span class="techBadge">AI</span>
+                    </div>
+                </div>
                 <div class="projectInfo">
                     <h3 class="projectName">Crossy Road Game</h3>
-                    <p class="projectDescription">2d Crossy Road game based on the orginal "Crossy Road".</p>
+                    <p class="projectDescription">Classic arcade-style game with AI opponent, featuring object-oriented design and dynamic gameplay.</p>
                     <div class="projectButtons">
-                        <label class="projectButton learnMore" for="crossyCheckbox">Learn More</label>
-                        <a href="https://github.com/randkam/frogger-game">
+                        <button class="projectButton learnMore">Learn More</button>
+                        <a href="https://github.com/randkam/frogger-game" class="githubLink">
                             <img class="github" src="images/github-white.png" alt="GitHub">
                         </a>
                     </div>
-                    <div class="detailedDescription">
+                    <div class="detailedDescription" style="display: none;">
+                        <h4 style="color: #99E1D9; margin-bottom: 15px; font-size: 20px;">Key Features</h4>
                         <ul>
-                            <li>Built a 2D Crossy Road-style game using the PyProcessing library.</li>
-                            <li>Utilized object-oriented methods extensively to manage game objects (roads, cars, characters), enabling features like collision detection.</li>
-                            <li>Implemented an AI player to compete against the user.</li>
-                            <li>Developed a leaderboard system to track high scores using JSON storage.</li>
+                            <li>Built using <strong>PyProcessing</strong> library for smooth 2D graphics rendering</li>
+                            <li><strong>Object-Oriented Programming</strong> architecture for game entities and logic</li>
+                            <li>Advanced <strong>collision detection</strong> system for precise gameplay</li>
+                            <li><strong>AI opponent</strong> with pathfinding algorithms for competitive gameplay</li>
+                            <li>Persistent <strong>leaderboard system</strong> using JSON data storage</li>
+                            <li>Dynamic difficulty scaling and procedural level generation</li>
                         </ul>
-                        <label class="projectButton close" for="crossyCheckbox">Close</label>
                     </div>
                 </div>
             </div>
@@ -344,17 +464,21 @@
 });
 particlesJS('particles', {
             particles: {
-                number: { value: 30, density: { enable: true, value_area: 800 } },
-                color: { value: "#FFFFFF" },
-                shape: { type: "circle", stroke: { width: 0, color: "#FFFFFF" }, polygon: { nb_sides: 5 } },
-                opacity: { value: 1, random: false, anim: { enable: false, speed: 2, opacity_min: 0.1, sync: false } },
-                size: { value: 1.8, random: true, anim: { enable: false, speed: 60, size_min: 0.5, sync: true } },
-                line_linked: { enable: true, distance: 150, color: "#FFFFFF", opacity: 0.4, width: 1 },
-                move: { enable: true, speed: 1, direction: "none", random: true, straight: false, out_mode: "out", bounce: false, attract: { enable: false, rotateX: 600, rotateY: 1200 } }
+                number: { value: 40, density: { enable: true, value_area: 800 } },
+                color: { value: "#99E1D9" },
+                shape: { type: "circle", stroke: { width: 0, color: "#99E1D9" }, polygon: { nb_sides: 5 } },
+                opacity: { value: 0.6, random: true, anim: { enable: true, speed: 0.5, opacity_min: 0.2, sync: false } },
+                size: { value: 2.5, random: true, anim: { enable: true, speed: 2, size_min: 0.5, sync: false } },
+                line_linked: { enable: true, distance: 150, color: "#99E1D9", opacity: 0.3, width: 1.5 },
+                move: { enable: true, speed: 1.5, direction: "none", random: true, straight: false, out_mode: "out", bounce: false, attract: { enable: false, rotateX: 600, rotateY: 1200 } }
             },
             interactivity: {
                 detect_on: "canvas",
-                events: { onhover: { enable: false, mode: "repulse" }, onclick: { enable: false, mode: "push" }, resize: true },
+                events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true },
+                modes: {
+                    grab: { distance: 140, line_linked: { opacity: 0.6 } },
+                    push: { particles_nb: 3 }
+                }
             },
             retina_detect: true
         });
@@ -384,112 +508,192 @@ particlesJS('particles', {
 //     });
 // };
 
-// Smooth transitions for project cards
+// Project Carousel (supports multiple carousels)
 document.addEventListener("DOMContentLoaded", function() {
-    // Get all "Learn More" and "Close" buttons
-    const learnMoreButtons = document.querySelectorAll('.projectButton.learnMore');
-    const closeButtons = document.querySelectorAll('.projectButton.close');
+    const carousels = document.querySelectorAll('.projectCarousel');
     
-    // Add click handlers for learn more buttons
+    carousels.forEach(carousel => {
+        const slides = carousel.querySelectorAll('.carouselImage');
+        const dots = carousel.querySelectorAll('.dot');
+        const leftArrow = carousel.querySelector('.carouselArrowLeft');
+        const rightArrow = carousel.querySelector('.carouselArrowRight');
+        let currentSlide = 0;
+        let autoSlideInterval;
+
+        // Skip if no slides
+        if (slides.length === 0) return;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            if (dots[index]) dots[index].classList.add('active');
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function startAutoSlide() {
+            if (slides.length > 1) {
+                autoSlideInterval = setInterval(nextSlide, 3500);
+            }
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
+
+        // Arrow button handlers
+        if (leftArrow) {
+            leftArrow.addEventListener('click', () => {
+                prevSlide();
+                stopAutoSlide();
+                startAutoSlide();
+            });
+        }
+
+        if (rightArrow) {
+            rightArrow.addEventListener('click', () => {
+                nextSlide();
+                stopAutoSlide();
+                startAutoSlide();
+            });
+        }
+
+        // Dot click handlers
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+                stopAutoSlide();
+                startAutoSlide();
+            });
+        });
+
+        // Pause on hover
+        carousel.addEventListener('mouseenter', stopAutoSlide);
+        carousel.addEventListener('mouseleave', startAutoSlide);
+
+        // Start auto-slide only if multiple slides
+        startAutoSlide();
+    });
+});
+
+// Project Modal Functionality
+document.addEventListener("DOMContentLoaded", function() {
+    const modal = document.getElementById('projectModal');
+    const modalOverlay = modal.querySelector('.modalOverlay');
+    const modalClose = modal.querySelector('.modalClose');
+    const modalTitle = modal.querySelector('.modalTitle');
+    const modalBody = modal.querySelector('.modalBody');
+    const modalTechBadges = modal.querySelector('.modalTechBadges');
+    const modalFooter = modal.querySelector('.modalFooter');
+    const learnMoreButtons = document.querySelectorAll('.projectButton.learnMore');
+    
+    // Open modal
     learnMoreButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // Get the corresponding card container
             const card = this.closest('.projectCard');
+            const projectName = card.querySelector('.projectName').textContent;
+            const detailedDescription = card.querySelector('.detailedDescription').innerHTML;
+            const techBadges = card.querySelectorAll('.techBadge');
+            const projectLinks = card.querySelector('.detailedDescription .projectLinks');
+            const githubLinks = card.querySelectorAll('.githubLink');
             
-            // Get elements that need to be animated
-            const initialElements = [
-                card.querySelector('.projectImage'),
-                card.querySelector('.projectName'),
-                card.querySelector('.projectDescription'),
-                card.querySelector('.projectButtons')
-            ];
+            // Set title
+            modalTitle.textContent = projectName;
             
-            const detailedDescription = card.querySelector('.detailedDescription');
+            // Set body content
+            modalBody.innerHTML = detailedDescription;
             
-            // Apply transitions
-            initialElements.forEach(el => {
-                if (el) {
-                    el.style.transition = 'opacity 0.9s ease, transform 0.4s ease';
-                    el.style.opacity = '0';
-                    el.style.transform = 'translateY(-20px)';
-                }
+            // Set tech badges
+            modalTechBadges.innerHTML = '';
+            techBadges.forEach(badge => {
+                const span = document.createElement('span');
+                span.className = 'modalTechBadge';
+                span.textContent = badge.textContent;
+                modalTechBadges.appendChild(span);
             });
             
-            // Show detailed description with delay
-            setTimeout(() => {
-                if (detailedDescription) {
-                    detailedDescription.style.transition = 'opacity 0.9s ease, transform 0.4s ease';
-                    detailedDescription.style.opacity = '1';
-                    detailedDescription.style.transform = 'translateY(0)';
-                    detailedDescription.style.position = 'relative';
-                    detailedDescription.style.pointerEvents = 'auto';
-                    detailedDescription.style.zIndex = '1';
+            // Set project links in footer
+            modalFooter.innerHTML = '';
+            
+            // Check for project links data attributes
+            if (projectLinks) {
+                const webappUrl = projectLinks.getAttribute('data-webapp');
+                const devpostUrl = projectLinks.getAttribute('data-devpost');
+                const githubUrl = projectLinks.getAttribute('data-github');
+                
+                if (webappUrl) {
+                    const webappLink = document.createElement('a');
+                    webappLink.href = webappUrl;
+                    webappLink.className = 'modalProjectLink';
+                    webappLink.target = '_blank';
+                    webappLink.innerHTML = '<span>🌐</span> View Web App';
+                    modalFooter.appendChild(webappLink);
                 }
                 
-                // Apply "display: none" after transition completes
-                setTimeout(() => {
-                    initialElements.forEach(el => {
-                        if (el) el.style.display = 'none';
-                    });
-                }, 400);
-            }, 300);
+                if (devpostUrl) {
+                    const devpostLink = document.createElement('a');
+                    devpostLink.href = devpostUrl;
+                    devpostLink.className = 'modalProjectLink devpostLink';
+                    devpostLink.target = '_blank';
+                    devpostLink.innerHTML = '<span>🏆</span> View on Devpost';
+                    modalFooter.appendChild(devpostLink);
+                }
+                
+                if (githubUrl) {
+                    const githubLink = document.createElement('a');
+                    githubLink.href = githubUrl;
+                    githubLink.className = 'modalGithubLink';
+                    githubLink.target = '_blank';
+                    githubLink.innerHTML = '<img src="images/github-white.png" alt="GitHub">View on GitHub';
+                    modalFooter.appendChild(githubLink);
+                }
+            } else if (githubLinks.length > 0) {
+                // Fallback for projects without projectLinks data
+                const githubLink = document.createElement('a');
+                githubLink.href = githubLinks[0].href;
+                githubLink.className = 'modalGithubLink';
+                githubLink.target = '_blank';
+                githubLink.innerHTML = '<img src="images/github-white.png" alt="GitHub">View on GitHub';
+                modalFooter.appendChild(githubLink);
+            }
+            
+            // If no links, hide footer
+            if (modalFooter.children.length === 0) {
+                modalFooter.style.display = 'none';
+            } else {
+                modalFooter.style.display = 'flex';
+            }
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
         });
     });
     
-    // Add click handlers for close buttons
-    closeButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Get the corresponding card container
-            const card = this.closest('.projectCard');
-            
-            // Get elements that need to be animated
-            const initialElements = [
-                card.querySelector('.projectImage'),
-                card.querySelector('.projectName'),
-                card.querySelector('.projectDescription'),
-                card.querySelector('.projectButtons')
-            ];
-            
-            const detailedDescription = card.querySelector('.detailedDescription');
-            
-            // Hide detailed description
-            if (detailedDescription) {
-                detailedDescription.style.opacity = '0';
-                detailedDescription.style.transform = 'translateY(20px)';
-            }
-            
-            // Prepare initial elements for showing
-            initialElements.forEach(el => {
-                if (el) {
-                    el.style.display = '';
-                    // Force a reflow before changing other properties
-                    void el.offsetWidth;
-                    el.style.opacity = '0';
-                    el.style.transform = 'translateY(-20px)';
-                    el.style.position = '';
-                    el.style.pointerEvents = '';
-                }
-            });
-            
-            // Show initial elements with delay
-            setTimeout(() => {
-                initialElements.forEach(el => {
-                    if (el) {
-                        el.style.opacity = '1';
-                        el.style.transform = 'translateY(0)';
-                    }
-                });
-                
-                // Hide detailed description completely after transition
-                setTimeout(() => {
-                    if (detailedDescription) {
-                        detailedDescription.style.position = 'absolute';
-                        detailedDescription.style.pointerEvents = 'none';
-                        detailedDescription.style.zIndex = '-1';
-                    }
-                }, 400);
-            }, 300);
-        });
+    // Close modal
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    modalClose.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', closeModal);
+    
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
     });
 });
 
