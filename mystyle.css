@@ -499,13 +499,13 @@ body {
 }
 
 .logo {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: flex-start;
-  width: 86px;
+  display: block;
   padding: 0px 0px 0px 20px;
-  height: 80px;
+  height: 60px;          /* keep logo from stretching vertically */
+  width: auto;           /* preserve aspect ratio */
+  max-height: 72px;      /* never exceed navbar height */
+  max-width: 86px;       /* keep your current visual size */
+  object-fit: contain;   /* safety: fit inside box without distortion */
   transition: all 0.3s ease;
   cursor: pointer;
   filter: drop-shadow(0 2px 10px rgba(153, 225, 217, 0.3));
