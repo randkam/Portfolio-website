@@ -14,13 +14,29 @@
 </head>
 
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <img class="loading-logo" src="images/RK_transparent-1.png" alt="RK Logo">
+            <div class="loading-bar-container">
+                <div class="loading-bar" id="loadingBar"></div>
+            </div>
+        </div>
+    </div>
+
     <div id="particles"></div>
 
     <div class="navigation" id="navbar">
 
         <img class="logo"  id = "myLogo" src="images/RK_transparent-1.png">	
 
-        <div class="nav-links">
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <div class="nav-links" id="navLinks">
             <div class = "navOption">
                 <a  id= "navOptionAbout" class="navOptionText" href="#aboutMePage">About Me</a>
             </div>
@@ -348,6 +364,36 @@
   
     
     <script>
+   // Add loading class to body initially
+   document.body.classList.add('loading');
+
+   // Loading Animation
+   window.addEventListener('load', function() {
+       const loadingScreen = document.getElementById('loadingScreen');
+       const loadingContent = document.querySelector('.loading-content');
+       const loadingLogo = document.querySelector('.loading-logo');
+       const loadingBar = document.getElementById('loadingBar');
+       
+       // Wait for loading bar to fill (0.6 seconds)
+       setTimeout(function() {
+           // Add move-to-nav animation class
+           loadingLogo.classList.add('move-to-nav');
+           loadingContent.classList.add('move-to-nav');
+           
+           // After move animation completes (0.3 seconds), fade out loading screen
+           setTimeout(function() {
+               loadingScreen.classList.add('fade-out');
+               document.body.classList.remove('loading');
+               document.body.classList.add('loaded');
+               
+               // Remove loading screen from DOM after fade completes
+               setTimeout(function() {
+                   loadingScreen.style.display = 'none';
+               }, 250);
+           }, 300);
+       }, 600);
+   });
+
    document.addEventListener("DOMContentLoaded", function () {
         const descriptions = [
             "Software Developer",
@@ -388,6 +434,37 @@
         }
 
         typeEffect(); // Start animation
+
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        
+        if (hamburger) {
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Close menu when clicking on a nav link
+            const navOptions = document.querySelectorAll('.navOptionText');
+            navOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = navLinks.contains(event.target);
+                const isClickOnHamburger = hamburger.contains(event.target);
+                
+                if (!isClickInsideNav && !isClickOnHamburger && navLinks.classList.contains('active')) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
+            });
+        }
     });
 
 
@@ -462,9 +539,13 @@
     onScroll();
     
 });
-particlesJS('particles', {
+        // Adjust particle count based on screen size for better performance
+        const isMobile = window.innerWidth <= 768;
+        const particleCount = isMobile ? 20 : 40;
+
+        particlesJS('particles', {
             particles: {
-                number: { value: 40, density: { enable: true, value_area: 800 } },
+                number: { value: particleCount, density: { enable: true, value_area: 800 } },
                 color: { value: "#99E1D9" },
                 shape: { type: "circle", stroke: { width: 0, color: "#99E1D9" }, polygon: { nb_sides: 5 } },
                 opacity: { value: 0.6, random: true, anim: { enable: true, speed: 0.5, opacity_min: 0.2, sync: false } },
