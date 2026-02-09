@@ -178,7 +178,7 @@ body {
     #7BC9C0 75%, 
     #99E1D9 100%);
   background-size: 200% 100%;
-  animation: loadingBarFill 0.6s ease-out forwards, loadingBarShine 0.4s linear infinite;
+  animation: loadingBarFill 1.5s ease-out forwards, loadingBarShine 0.4s linear infinite;
   box-shadow: 
     0 0 20px rgba(153, 225, 217, 0.8),
     0 0 30px rgba(153, 225, 217, 0.5),
@@ -349,11 +349,9 @@ body.loaded .projectsPage {
 @keyframes fadeInContent {
   from {
     opacity: 0;
-    transform: translateY(20px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -429,6 +427,9 @@ body.loaded .projectsPage {
   line-height: 1.6;
   font-weight: 500;
   text-shadow: 0 2px 10px rgba(153, 225, 217, 0.3);
+}
+
+body.loaded .rightText {
   animation: fadeInUp 0.8s ease-out 0.8s both;
 }
 
@@ -1088,7 +1089,6 @@ body.loaded .projectsPage {
   color: #99E1D9;
   font-size: 55px;
   text-shadow: 0 0 20px rgba(153, 225, 217, 0.5);
-  animation: float 3s ease-in-out infinite;
 }
 
 .greeting {
@@ -1099,7 +1099,6 @@ body.loaded .projectsPage {
   line-height: 1.2;
   color: #E8F0F2;
   font-weight: 400;
-  animation: float 3s ease-in-out infinite, fadeInUp 0.8s ease-out 0.2s both;
 }
 
 .name {
@@ -1114,14 +1113,12 @@ body.loaded .projectsPage {
   padding-left: 1.2em;
   line-height: 1.2;
   filter: drop-shadow(0 4px 20px rgba(153, 225, 217, 0.3));
-  animation: float 3s ease-in-out infinite, fadeInUp 0.8s ease-out 0.4s both;
 }
 
 .middle-bracket {
   color: #F0F7F4;
   margin: 0;
   padding-left: 2em;
-  animation: float 3s ease-in-out infinite;
 }
 
 .description {
@@ -1132,7 +1129,27 @@ body.loaded .projectsPage {
   padding-left: 6em;
   line-height: 1.2; 
   text-shadow: 0 2px 10px rgba(153, 225, 217, 0.2);
-  animation: float 3s ease-in-out infinite, fadeInUp 0.8s ease-out 0.6s both;
+}
+
+/* Only start landing page animations after loading screen is gone */
+body.loaded .bracket {
+  animation: float 3s ease-in-out 0.8s infinite;
+}
+
+body.loaded .greeting {
+  animation: float 3s ease-in-out 0.8s infinite;
+}
+
+body.loaded .name {
+  animation: float 3s ease-in-out 0.8s infinite;
+}
+
+body.loaded .middle-bracket {
+  animation: float 3s ease-in-out 0.8s infinite;
+}
+
+body.loaded .description {
+  animation: float 3s ease-in-out 0.8s infinite;
 }
 
 

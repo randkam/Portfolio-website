@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="mystyle.css">
-    <link href='https://fonts.googleapis.com/css?family=Inter|Poppins|Roboto&display=swap' rel='stylesheet'>  
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'> 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link href='https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;500;600;700&family=JetBrains+Mono&display=swap' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
  
 </head>
 
@@ -69,7 +69,7 @@
             <p class="greeting">Hello, my name is</p>
             <h1 class="name">Rand Kamaleddine</h1>
             <p class="bracket middle-bracket">{</p> <!-- Middle bracket -->
-                <p id="description" class="description">Software Developer</p>
+                <p id="description" class="description"></p>
                 <p class="bracket middle-bracket">}</p> <!-- Middle bracket -->
             <p class="bracket">}</p>
         </div>
@@ -105,7 +105,7 @@
                 </ul>
             </div>
             <div class = "aboutImg">
-                <img class="aboutMeImage" src="images/selfPortrait.png">	
+                <img class="aboutMeImage" src="images/selfPortrait.png" loading="lazy">	
             </div> 
            
         </div>  
@@ -117,39 +117,39 @@
         <div class ="languageScreen" id="#python">
             <div class="skills">
                 <div class="language">
-                    <img class="languageIcon" src="images/Python-logo-notext.svg.png">
+                    <img class="languageIcon" src="images/Python-logo-notext.svg.png" loading="lazy">
                 </div>
                 
                 <div class="language">
-                    <img class="languageIcon" src="images/java-logo-1.png">
+                    <img class="languageIcon" src="images/java-logo-1.png" loading="lazy">
                 </div>
 
                 <div class="language">
-                    <img class="languageIcon" src="images/C_Programming_Language.svg.png">
+                    <img class="languageIcon" src="images/C_Programming_Language.svg.png" loading="lazy">
                 </div>
 
                 <div class="language">
-                    <img class="languageIcon" src="images/HTML5_logo_and_wordmark.svg.png">
+                    <img class="languageIcon" src="images/HTML5_logo_and_wordmark.svg.png" loading="lazy">
                 </div>
 
                 <div class="language">
-                    <img class="languageIcon" src="images/database_5664.png">
+                    <img class="languageIcon" src="images/database_5664.png" loading="lazy">
                 </div>
 
                 <div class="language">
-                    <img class="languageIcon" src="images/javascript-logo-javascript-icon-transparent-free-png.webp">
+                    <img class="languageIcon" src="images/javascript-logo-javascript-icon-transparent-free-png.webp" loading="lazy">
                 </div>
                 <div class="language">
-                    <img class="languageIcon" src="images/PHP-logo.svg.png">
+                    <img class="languageIcon" src="images/PHP-logo.svg.png" loading="lazy">
                 </div>
                 <div class="language">
-                    <img class="languageIcon" src="images/swift.png">
+                    <img class="languageIcon" src="images/swift.png" loading="lazy">
                 </div>
                 <div class="language">
-                    <img class="languageIcon" src="images/docker.webp">
+                    <img class="languageIcon" src="images/docker.webp" loading="lazy">
                 </div>
                 <div class="language">
-                    <img class="languageIcon" src="images/git.png">
+                    <img class="languageIcon" src="images/git.png" loading="lazy">
                 </div>
 
             </div>
@@ -181,10 +181,10 @@
             <div class="projectCard">
                 <div class="projectImageContainer projectCarousel">
                     <div class="carouselSlides">
-                        <img class="projectImage carouselImage active" src="images/matchup-1.png" alt="MatchUp App Screen 1">
-                        <img class="projectImage carouselImage" src="images/matchup-2.png" alt="MatchUp App Screen 2">
-                        <img class="projectImage carouselImage" src="images/matchup-3.png" alt="MatchUp App Screen 3">
-                        <img class="projectImage carouselImage" src="images/matchup-4.png" alt="MatchUp App Screen 4">
+                        <img class="projectImage carouselImage active" src="images/matchup-1.png" alt="MatchUp App Screen 1" loading="lazy">
+                        <img class="projectImage carouselImage" src="images/matchup-2.png" alt="MatchUp App Screen 2" loading="lazy">
+                        <img class="projectImage carouselImage" src="images/matchup-3.png" alt="MatchUp App Screen 3" loading="lazy">
+                        <img class="projectImage carouselImage" src="images/matchup-4.png" alt="MatchUp App Screen 4" loading="lazy">
                     </div>
                     <button class="carouselArrow carouselArrowLeft">‹</button>
                     <button class="carouselArrow carouselArrowRight">›</button>
@@ -218,7 +218,7 @@
             <div class="projectCard">
                 <div class="projectImageContainer projectCarousel">
                     <div class="carouselSlides">
-                        <img class="projectImage carouselImage active" src="images/quickpdf-preview.png" alt="QuickPDF Preview">
+                        <img class="projectImage carouselImage active" src="images/quickpdf-preview.png" alt="QuickPDF Preview" loading="lazy">
                     </div>
                     <div class="projectTechStack">
                         <span class="techBadge">React</span>
@@ -250,11 +250,11 @@
             <div class="projectCard">
                 <div class="projectImageContainer projectCarousel">
                     <div class="carouselSlides">
-                        <img class="projectImage carouselImage active" src="images/homehero-1.png" alt="HomeHero App Screen 1">
-                        <img class="projectImage carouselImage" src="images/homehero-2.png" alt="HomeHero App Screen 2">
-                        <img class="projectImage carouselImage" src="images/homehero-3.png" alt="HomeHero App Screen 3">
-                        <img class="projectImage carouselImage" src="images/homehero-4.png" alt="HomeHero App Screen 4">
-                        <img class="projectImage carouselImage" src="images/homehero-5.png" alt="HomeHero App Screen 5">
+                        <img class="projectImage carouselImage active" src="images/homehero-1.png" alt="HomeHero App Screen 1" loading="lazy">
+                        <img class="projectImage carouselImage" src="images/homehero-2.png" alt="HomeHero App Screen 2" loading="lazy">
+                        <img class="projectImage carouselImage" src="images/homehero-3.png" alt="HomeHero App Screen 3" loading="lazy">
+                        <img class="projectImage carouselImage" src="images/homehero-4.png" alt="HomeHero App Screen 4" loading="lazy">
+                        <img class="projectImage carouselImage" src="images/homehero-5.png" alt="HomeHero App Screen 5" loading="lazy">
                     </div>
                     <button class="carouselArrow carouselArrowLeft">‹</button>
                     <button class="carouselArrow carouselArrowRight">›</button>
@@ -295,7 +295,7 @@
               </div>
             <div class="projectCard">
                 <div class="projectImageContainer">
-                    <img class="projectImage" src="images/rsa-algorithm-feature.jpg" alt="RSA Algorithm Preview">
+                    <img class="projectImage" src="images/rsa-algorithm-feature.jpg" alt="RSA Algorithm Preview" loading="lazy">
                     <div class="projectTechStack">
                         <span class="techBadge">Python</span>
                         <span class="techBadge">Cryptography</span>
@@ -324,7 +324,7 @@
             </div>
             <div class="projectCard">
                 <div class="projectImageContainer">
-                    <img class="projectImage" id="crossyVideo" src="images/crossyRoad.gif" alt="Crossy Road Game Preview">
+                    <img class="projectImage" id="crossyVideo" src="images/crossyRoad.gif" alt="Crossy Road Game Preview" loading="lazy">
                     <div class="projectTechStack">
                         <span class="techBadge">Python</span>
                         <span class="techBadge">PyProcessing</span>
@@ -367,14 +367,14 @@
    // Add loading class to body initially
    document.body.classList.add('loading');
 
-   // Loading Animation
-   window.addEventListener('load', function() {
+   // Loading Animation - runs on DOMContentLoaded (doesn't wait for all images)
+   document.addEventListener('DOMContentLoaded', function() {
        const loadingScreen = document.getElementById('loadingScreen');
        const loadingContent = document.querySelector('.loading-content');
        const loadingLogo = document.querySelector('.loading-logo');
        const loadingBar = document.getElementById('loadingBar');
        
-       // Wait for loading bar to fill (0.6 seconds)
+       // Wait for loading bar to fill (0.5 seconds)
        setTimeout(function() {
            // Add move-to-nav animation class
            loadingLogo.classList.add('move-to-nav');
@@ -391,7 +391,7 @@
                    loadingScreen.style.display = 'none';
                }, 250);
            }, 300);
-       }, 600);
+       }, 500);
    });
 
    document.addEventListener("DOMContentLoaded", function () {
@@ -540,6 +540,8 @@
     
 });
         // Adjust particle count based on screen size for better performance
+        // Wait for deferred particles.js to load before initializing
+        function initParticles() {
         const isMobile = window.innerWidth <= 768;
         const particleCount = isMobile ? 20 : 40;
 
@@ -563,6 +565,14 @@
             },
             retina_detect: true
         });
+        }
+
+        // Initialize particles when the deferred script is ready
+        if (typeof particlesJS !== 'undefined') {
+            initParticles();
+        } else {
+            window.addEventListener('load', initParticles);
+        }
 
     // window.onload = function() {
     // var video = document.getElementById("matchupVideo");
