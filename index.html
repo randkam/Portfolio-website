@@ -82,76 +82,77 @@
     </div>
 
     <div class="aboutMePage" id="aboutMePage">
-        <t class = "aboutTitle">About Me</t>
+        <div class="aboutSectionHeader">
+            <t class="aboutTitle">About Me</t>
+            <!-- <p class="aboutSubtitle">A bit about who I am</p> -->
+        </div>
         <div class="aboutPageRow">
             <div class="aboutTxt">
-
-                <!-- <div class="aboutPills" aria-label="Quick highlights">
-                    <span class="aboutPill">Computer Science @ UofG</span>
-                    <span class="aboutPill">QuickPDF</span>
-                    <span class="aboutPill">MatchUp</span>
-                </div> -->
-
                 <ul class="aboutMeText"><li>Currently pursuing a degree in <span class="highlight">Computer Science</span> with a minor in Mathematics at the University of Guelph.</li></ul>
                 <ul class="aboutMeText">
                     <li>Outside of class, you'll find me:
                         <ul class="subBullets">
-                            <li>Building new features for <span class="highlight">QuickPDF</span></li>
-                            <li>Prepping <span class="highlight">MatchUp</span> for launch</li>
+                            <li>Building new features for <a href="https://quick-pdf.netlify.app" target="_blank" class="about-link quickpdf-link">QuickPDF<span class="ext-arrow">↗</span></a></li>
+                            <li>Prepping <a href="https://matchuptournaments.lovable.app" target="_blank" class="about-link matchup-link">MatchUp<span class="ext-arrow">↗</span></a> for launch</li>
                             <li>Networking for my next internship opportunity</li>
                             <li>Staying active at the gym, on the basketball court, playing soccer, or on the ice for hockey</li>
                         </ul>
                     </li>
                 </ul>
             </div>
-            <div class = "aboutImg">
-                <img class="aboutMeImage" src="images/selfPortrait.png" loading="lazy">	
-            </div> 
-           
-        </div>  
+            <div class="aboutImg">
+                <img class="aboutMeImage" src="images/selfPortrait.png" loading="lazy">
+            </div>
+        </div>
     </div>
 
-    <div class="skillsPage">
-        <t class = "skillsTitle">Skills/Technologies</t>
-        
-        <div class ="languageScreen" id="#python">
+    <div class="skillsPage" id="skillsPage">
+        <div class="skillsSectionHeader">
+            <t class="skillsTitle">Skills & Technologies</t>
+            <!-- <p class="skillsSubtitle">Languages and tools I work with</p> -->
+        </div>
+        <div class="languageScreen">
             <div class="skills">
                 <div class="language">
                     <img class="languageIcon" src="images/Python-logo-notext.svg.png" loading="lazy">
+                    <span class="languageName">Python</span>
                 </div>
-                
                 <div class="language">
                     <img class="languageIcon" src="images/java-logo-1.png" loading="lazy">
+                    <span class="languageName">Java</span>
                 </div>
-
                 <div class="language">
                     <img class="languageIcon" src="images/C_Programming_Language.svg.png" loading="lazy">
+                    <span class="languageName">C</span>
                 </div>
-
                 <div class="language">
                     <img class="languageIcon" src="images/HTML5_logo_and_wordmark.svg.png" loading="lazy">
+                    <span class="languageName">HTML/CSS</span>
                 </div>
-
                 <div class="language">
                     <img class="languageIcon" src="images/database_5664.png" loading="lazy">
+                    <span class="languageName">SQL</span>
                 </div>
-
                 <div class="language">
                     <img class="languageIcon" src="images/javascript-logo-javascript-icon-transparent-free-png.webp" loading="lazy">
+                    <span class="languageName">JavaScript</span>
                 </div>
                 <div class="language">
                     <img class="languageIcon" src="images/PHP-logo.svg.png" loading="lazy">
+                    <span class="languageName">PHP</span>
                 </div>
                 <div class="language">
                     <img class="languageIcon" src="images/swift.png" loading="lazy">
+                    <span class="languageName">Swift</span>
                 </div>
                 <div class="language">
                     <img class="languageIcon" src="images/docker.webp" loading="lazy">
+                    <span class="languageName">Docker</span>
                 </div>
                 <div class="language">
                     <img class="languageIcon" src="images/git.png" loading="lazy">
+                    <span class="languageName">Git</span>
                 </div>
-
             </div>
         </div>
     </div>
@@ -175,25 +176,15 @@
         </div>
     </div>
 
-    <div class="projectsPage">
-        <t class="projectsTitle">Featured Projects</t>
+    <div class="projectsPage" id="projectsPage">
+        <div class="projectsSectionHeader">
+            <t class="projectsTitle">Featured Projects</t>
+            <!-- <p class="projectsSubtitle">A collection of things I've been building and shipping</p> -->
+        </div>
         <div class="projectGrid">
             <div class="projectCard">
-                <div class="projectImageContainer projectCarousel">
-                    <div class="carouselSlides">
-                        <img class="projectImage carouselImage active" src="images/matchup-1.png" alt="MatchUp App Screen 1" loading="lazy">
-                        <img class="projectImage carouselImage" src="images/matchup-2.png" alt="MatchUp App Screen 2" loading="lazy">
-                        <img class="projectImage carouselImage" src="images/matchup-3.png" alt="MatchUp App Screen 3" loading="lazy">
-                        <img class="projectImage carouselImage" src="images/matchup-4.png" alt="MatchUp App Screen 4" loading="lazy">
-                    </div>
-                    <button class="carouselArrow carouselArrowLeft">‹</button>
-                    <button class="carouselArrow carouselArrowRight">›</button>
-                    <div class="carouselDots">
-                        <span class="dot active" data-slide="0"></span>
-                        <span class="dot" data-slide="1"></span>
-                        <span class="dot" data-slide="2"></span>
-                        <span class="dot" data-slide="3"></span>
-                    </div>
+                <div class="projectImageContainer" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
+                    <img class="projectImage matchup" src="images/matchup-logo.png" alt="MatchUp App Logo" loading="lazy">
                     <div class="projectTechStack">
                         <span class="techBadge">Swift</span>
                         <span class="techBadge">Spring Boot</span>
@@ -201,14 +192,16 @@
                     </div>
                 </div>
                 <div class="projectInfo">
-                    <h3 class="projectName">MatchUp App</h3>
+                    <div class="projectInfoHeader">
+                        <h3 class="projectName">MatchUp App</h3>
+                        <span class="statusBadge marketing">Launching</span>
+                    </div>
                     <p class="projectDescription">Tournament hosting platform with live bracket updates, team creation and invites, real-time activity tracking, and detailed player statistics.</p>
                     <div class="projectButtons">
-                        <button class="projectButton learnMore">Learn More</button>
-                        <a href="https://matchuptournaments.lovable.app" class="projectLinkBadge webappBadge" target="_blank">
-                            🌐 Join Waitlist
+                        <button class="projectButton learnMore">Details</button>
+                        <a href="https://matchuptournaments.lovable.app" class="projectActionLink" target="_blank">
+                            <span>🌐</span> Waitlist
                         </a>
-                        <span class="statusBadge marketing">📢 Marketing Stage</span>
                     </div>
                     <div class="detailedDescription" style="display: none;">
                         <p style="margin-bottom: 20px; color: #E8F0F2; font-size: 18px; line-height: 1.8;">A tournament hosting application featuring live bracket updates, team creation and invites, real-time activity updates, and detailed tracking of team and individual player stats.</p>
@@ -217,8 +210,8 @@
                         <div class="projectLinks" data-webapp="https://matchuptournaments.lovable.app"></div>
                     </div>
                 </div>
-              </div>
-              
+            </div>
+
             <div class="projectCard">
                 <div class="projectImageContainer projectCarousel">
                     <div class="carouselSlides">
@@ -231,17 +224,19 @@
                     </div>
                 </div>
                 <div class="projectInfo">
-                    <h3 class="projectName">QuickPDF</h3>
+                    <div class="projectInfoHeader">
+                        <h3 class="projectName">QuickPDF</h3>
+                        <span class="statusBadge active">Active</span>
+                    </div>
                     <p class="projectDescription">Full-stack PDF utility using React, Flask, Redis, and Docker with asynchronous processing and secure file handling. Trusted by 100+ users.</p>
                     <div class="projectButtons">
-                        <button class="projectButton learnMore">Learn More</button>
-                        <a href="https://quick-pdf.netlify.app" class="projectLinkBadge webappBadge" target="_blank">
-                            🌐 Check It Out!
+                        <button class="projectButton learnMore">Details</button>
+                        <a href="https://quick-pdf.netlify.app" class="projectActionLink" target="_blank">
+                            <span>🌐</span> Try It
                         </a>
-                        <a href="https://github.com/randkam/QuickPDF" class="githubLink" target="_blank">
-                            <img class="github" src="images/github-white.png" alt="GitHub">
+                        <a href="https://github.com/randkam/QuickPDF" class="projectActionLink githubLink" target="_blank">
+                            <img src="images/github-white.png" alt="GitHub" class="actionLinkIcon"> Code
                         </a>
-                        <span class="statusBadge active">🚀 Adding New Features</span>
                     </div>
                     <div class="detailedDescription" style="display: none;">
                         <p style="margin-bottom: 20px; color: #E8F0F2; font-size: 18px; line-height: 1.8;">Full-stack PDF utility web application using React, Flask, Redis, and Docker, with asynchronous background job processing and secure file handling. Early usage by 100+ users.</p>
@@ -251,6 +246,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="projectCard">
                 <div class="projectImageContainer projectCarousel">
                     <div class="carouselSlides">
@@ -276,17 +272,19 @@
                     </div>
                 </div>
                 <div class="projectInfo">
-                    <h3 class="projectName">HomeHero App</h3>
+                    <div class="projectInfoHeader">
+                        <h3 class="projectName">HomeHero App</h3>
+                        <span class="statusBadge expanding">Expanding</span>
+                    </div>
                     <p class="projectDescription">Household organizer application built for Hackville 2026 for managing shared tasks, expenses, and shopping lists among roommates.</p>
                     <div class="projectButtons">
-                        <button class="projectButton learnMore">Learn More</button>
-                        <a href="https://devpost.com/software/homehero-y1k9vh" class="projectLinkBadge devpostBadge" target="_blank">
-                            🏆 Devpost
+                        <button class="projectButton learnMore">Details</button>
+                        <a href="https://devpost.com/software/homehero-y1k9vh" class="projectActionLink devpostLink" target="_blank">
+                            <span>🏆</span> Devpost
                         </a>
-                        <a href="https://github.com/antonioconopio/HomeHero" class="githubLink" target="_blank">
-                            <img class="github" src="images/github-white.png" alt="GitHub">
+                        <a href="https://github.com/antonioconopio/HomeHero" class="projectActionLink githubLink" target="_blank">
+                            <img src="images/github-white.png" alt="GitHub" class="actionLinkIcon"> Code
                         </a>
-                        <span class="statusBadge expanding">✨ Expanding Features</span>
                     </div>
                     <div class="detailedDescription" style="display: none;">
                         <h4 style="color: #99E1D9; margin-bottom: 15px; font-size: 20px;">Built for Hackville 2026</h4>
@@ -296,7 +294,8 @@
                         <div class="projectLinks" data-devpost="https://devpost.com/software/homehero-y1k9vh" data-github="https://github.com/antonioconopio/HomeHero"></div>
                     </div>
                 </div>
-              </div>
+            </div>
+
             <div class="projectCard">
                 <div class="projectImageContainer">
                     <img class="projectImage" src="images/rsa-algorithm-feature.jpg" alt="RSA Algorithm Preview" loading="lazy">
@@ -306,12 +305,14 @@
                     </div>
                 </div>
                 <div class="projectInfo">
-                    <h3 class="projectName">RSA Encrypt/Decrypt</h3>
+                    <div class="projectInfoHeader">
+                        <h3 class="projectName">RSA Encrypt/Decrypt</h3>
+                    </div>
                     <p class="projectDescription">Implementation of RSA cryptographic algorithms from scratch using advanced mathematical concepts.</p>
                     <div class="projectButtons">
-                        <button class="projectButton learnMore">Learn More</button>
-                        <a href="https://github.com/randkam/RSA-encrypt-decrypt" class="githubLink">
-                            <img class="github" src="images/github-white.png" alt="GitHub">
+                        <button class="projectButton learnMore">Details</button>
+                        <a href="https://github.com/randkam/RSA-encrypt-decrypt" class="projectActionLink githubLink" target="_blank">
+                            <img src="images/github-white.png" alt="GitHub" class="actionLinkIcon"> Code
                         </a>
                     </div>
                     <div class="detailedDescription" style="display: none;">
@@ -326,6 +327,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="projectCard">
                 <div class="projectImageContainer">
                     <img class="projectImage" id="crossyVideo" src="images/crossyRoad.gif" alt="Crossy Road Game Preview" loading="lazy">
@@ -336,12 +338,14 @@
                     </div>
                 </div>
                 <div class="projectInfo">
-                    <h3 class="projectName">Crossy Road Game</h3>
+                    <div class="projectInfoHeader">
+                        <h3 class="projectName">Crossy Road Game</h3>
+                    </div>
                     <p class="projectDescription">Classic arcade-style game with AI opponent, featuring object-oriented design and dynamic gameplay.</p>
                     <div class="projectButtons">
-                        <button class="projectButton learnMore">Learn More</button>
-                        <a href="https://github.com/randkam/frogger-game" class="githubLink">
-                            <img class="github" src="images/github-white.png" alt="GitHub">
+                        <button class="projectButton learnMore">Details</button>
+                        <a href="https://github.com/randkam/frogger-game" class="projectActionLink githubLink" target="_blank">
+                            <img src="images/github-white.png" alt="GitHub" class="actionLinkIcon"> Code
                         </a>
                     </div>
                     <div class="detailedDescription" style="display: none;">
@@ -358,11 +362,6 @@
                 </div>
             </div>
         </div>
-
-    </div>
-
-          
-    
     </div>
 
   
@@ -680,6 +679,24 @@ document.addEventListener("DOMContentLoaded", function() {
         // Start auto-slide only if multiple slides
         startAutoSlide();
     });
+});
+
+// Scroll-triggered reveals for all sections
+document.addEventListener("DOMContentLoaded", function() {
+    var revealTargets = document.querySelectorAll('.projectCard, .language, .aboutPageRow');
+    if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        revealTargets.forEach(function(el) { observer.observe(el); });
+    } else {
+        revealTargets.forEach(function(el) { el.classList.add('revealed'); });
+    }
 });
 
 // Project Modal Functionality
